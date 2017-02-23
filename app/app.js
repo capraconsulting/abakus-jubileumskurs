@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
+import {Text, View} from 'react-native';
+import {Provider} from 'react-redux';
 
-import {
-  Text,
-  View
-} from 'react-native';
+import store from './store';
 
 class App extends Component {
 
   render() {
     return (
-      <View>
-        <Text>Hei</Text>
-      </View>
+      <Provider store={store}>
+        <View>
+          <Text>Hei</Text>
+        </View>
+      </Provider>
     );
   }
 }
