@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import {Text, View} from 'react-native';
-import {Provider} from 'react-redux';
+import { View } from 'react-native';
+import { Provider } from 'react-redux';
 
 import store from './store';
+import MaterialButton from './material/MaterialButton';
 
 class App extends Component {
 
   render() {
     return (
       <Provider store={store}>
-        <View>
-          <Text>Hei</Text>
+        <View style={{alignItems: 'center'}}>
+          <MaterialButton text={'Hei'}
+                          handleClick={() => {}} />
         </View>
       </Provider>
     );

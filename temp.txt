@@ -1,0 +1,4 @@
+Installere react-native-material-kit:
+
+yarn add react-native-material-kit
+react-native link react-native-material-kit
