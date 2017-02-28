@@ -11,7 +11,7 @@ En bruker skal kunne legge inn nye øl, samt se en oversikt over øl som er lagt
 ##  Steg 1: Legge inn en ny øl
 Her skal dere lage et view som lar brukeren legge inn øl med navn, type, land, produsent og prosent.
 
-a) __Øl-snitt__: Naviger frem til `NewBrewComponent`. Her skal dere legge til felt for hvert ølattributt (navn, type etc)
+a) __Øl-snitt__: Naviger frem til `NewBrew`. Her skal dere legge til felt for hvert ølattributt (navn, type etc)
 i render funksjonen. I tillegg skal dere ha en lagre knapp som skal legge til øl i ølsamlinga.
 
 Note: For land har vi laget det ferdige komponentet "CountrySelect". Bruk `Touchable` for knapper i React Native.
