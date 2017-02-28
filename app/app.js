@@ -4,6 +4,7 @@ import { StyleSheet, View } from 'react-native';
 import Button from './elements/Button';
 import Card from './elements/Card';
 import List from './elements/List';
+import Icon from './elements/Icon';
 
 const items = [
   {title: 'Rad 1'},
@@ -17,6 +18,7 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <Card title={'Selected beer'} />
+        <Icon />
         <Button text={'Add beer'}
                 onClick={() => {}} />
         <List items={items} />

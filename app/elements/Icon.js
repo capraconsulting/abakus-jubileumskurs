@@ -5,8 +5,7 @@ import { Icon as ElementsIcon } from 'react-native-elements';
 import icons from '../constants/icons';
 
 const Icon = ({icon}) => (
-  <Icon name={icon.name}
-        type={icon.type} />
+  <ElementsIcon {...icon} />
 );
 
 Icon.propTypes = {
