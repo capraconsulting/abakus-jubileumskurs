@@ -1,6 +1,0 @@
-https://github.com/react-native-community/react-native-elements
-http://fontawesome.io/icons/
-
-yarn add react-native-vector-icons
-react-native link react-native-vector-icons
-yarn add react-native-elements
