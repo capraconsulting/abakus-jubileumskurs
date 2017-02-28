@@ -12,12 +12,12 @@ import {
   View
 } from 'react-native';
 
-import App from './app/app';
+import AppWrapper from './app/index';
 
 export default class jubileumskurs extends Component {
   render() {
     return (
-      <App />
+      <AppWrapper />
     );
   }
 }
