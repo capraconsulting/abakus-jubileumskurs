@@ -5,6 +5,7 @@ import Button from './elements/Button';
 import Card from './elements/Card';
 import List from './elements/List';
 import Icon from './elements/Icon';
+import Image from './elements/Image';
 
 const items = [
   {title: 'Rad 1'},
@@ -22,6 +23,7 @@ class App extends Component {
         <Button text={'Add beer'}
                 onClick={() => {}} />
         <List items={items} />
+        <Image source='http://beerbikemunich.com/demo/slider/01.jpg' />
       </View>
     );
   }
