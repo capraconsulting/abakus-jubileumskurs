@@ -1,29 +1,21 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import Button from './elements/Button';
-import Card from './elements/Card';
-import List from './elements/List';
-import Icon from './elements/Icon';
-import Image from './elements/Image';
-
-const items = [
-  {title: 'Rad 1'},
-  {title: 'Rad 2'},
-  {title: 'Rad 3'}
-];
+import Navigation from './containers/NavigatorContainer';
+import BeerListContainer from './containers/BeerListContainer';
+import NewBeerContainer from './containers/NewBeerContainer';
 
 class App extends Component {
 
   render() {
     return (
       <View style={styles.container}>
-        <Card title={'Selected beer'} />
-        <Icon />
-        <Button text={'Add beer'}
-                onClick={() => {}} />
-        <List items={items} />
-        <Image source='http://beerbikemunich.com/demo/slider/01.jpg' />
+        <Navigation
+          routes={{
+            beerList: BeerListContainer,
+            newBeer: NewBeerContainer
+          }}
+        />
       </View>
     );
   }

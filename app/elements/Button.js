@@ -5,7 +5,8 @@ import colors from '../constants/colors';
 import icons from '../constants/icons';
 
 const Button = ({text, large, icon, backgroundColor, onClick}) => (
-  <ElementsButton raised
+  <ElementsButton onPress={onClick}
+                  raised
                   large={large}
                   icon={icons.BEER}
                   backgroundColor={backgroundColor}
