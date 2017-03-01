@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 
 import Navigation from './containers/NavigatorContainer';
 import BeerListContainer from './containers/BeerListContainer';
-import NewBeerContainer from './containers/NewBeerContainer';
+import NewBrewContainer from './containers/NewBrewContainer';
 
 class App extends Component {
 
@@ -13,7 +13,7 @@ class App extends Component {
         <Navigation
           routes={{
             beerList: BeerListContainer,
-            newBeer: NewBeerContainer
+            newBeer: NewBrewContainer
           }}
         />
       </View>

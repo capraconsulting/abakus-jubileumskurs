@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { navigateBack } from '../actions/navigation'
-import NewBeer from '../components/NewBeer'
+import NewBrew from '../components/NewBrew'
+
+const mapStateToProps = state => ({
+});
 
 const mapDispatchToProps = dispatch => ({
   onNavigateBack: () => dispatch(navigateBack())
 });
 
-export default connect(null, mapDispatchToProps)(NewBeer);
+export default connect(mapStateToProps, mapDispatchToProps)(NewBrew);
