@@ -9,14 +9,15 @@ import Image from '../elements/Image';
 
 export const BeerList = ({beerList, navigateToNewForm}) => (
   <View>
-    <Card title='Selected beer' />
-    <Icon />
     <Button
       text='Add beer'
       onClick={navigateToNewForm}
     />
-    <List items={beerList.brews} />
-    <Image />
+    <List
+      items={beerList.brews}
+      titleKey='brewName'
+      onClick={() => {}}
+    />
   </View>
 );
 

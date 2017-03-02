@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import Card from '../elements/Card';
 import Image from '../elements/Image';
@@ -8,6 +8,7 @@ export const Brew = ({brew}) => (
   <View>
     <Card title={brew.brewName}>
       <Image />
+      <Text>{brew.brewName}</Text>
     </Card>
   </View>
 );
