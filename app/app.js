@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import Navigation from './containers/NavigatorContainer';
 import BeerListContainer from './containers/BeerListContainer';
+import BrewContainer from './containers/BrewContainer';
+import Navigation from './containers/NavigatorContainer';
 import NewBrewContainer from './containers/NewBrewContainer';
 
 class App extends Component {
@@ -14,7 +15,8 @@ class App extends Component {
           initialRoute='beerList'
           routes={{
             beerList: BeerListContainer,
-            newBeer: NewBrewContainer
+            newBeer: NewBrewContainer,
+            brew: BrewContainer
           }}
         />
       </View>

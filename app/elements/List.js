@@ -6,7 +6,7 @@ const List = ({items}) => (
     {
       items.map((item, i) => (
         <ListItem key={i}
-                  title={item.title} />
+                  title={item.brewName} />
       ))
     }
   </ElementsList>

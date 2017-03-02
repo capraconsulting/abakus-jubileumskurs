@@ -23,7 +23,14 @@ const initialState = {
       image: 'http://beerbikemunich.com/demo/slider/01.jpg'
     }
   ],
-  selected: undefined
+  selected: {
+    brewName: 'Pilsner',
+    brewery: 'Ringnes',
+    alcohol: 4.7,
+    brewType: 'Pilsner',
+    rating: 2,
+    image: 'http://beerbikemunich.com/demo/slider/01.jpg'
+  }
 };
 
 export default function reducer(state = initialState, action) {

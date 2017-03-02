@@ -7,21 +7,21 @@ import List from '../elements/List';
 import Icon from '../elements/Icon';
 import Image from '../elements/Image';
 
-export const BeerList = props => (
+export const BeerList = ({beerList, navigateToNewForm}) => (
   <View>
     <Card title='Selected beer' />
     <Icon />
     <Button
       text='Add beer'
-      onClick={props.navigateToNewForm}
+      onClick={navigateToNewForm}
     />
-    <List items={props.items} />
-    <Image source='http://beerbikemunich.com/demo/slider/01.jpg' />
+    <List items={beerList.brews} />
+    <Image />
   </View>
 );
 
 BeerList.propTypes = {
-  items: React.PropTypes.array.isRequired,
+  beerList: React.PropTypes.object.isRequired,
   navigateToNewForm: React.PropTypes.func.isRequired,
 };
 
