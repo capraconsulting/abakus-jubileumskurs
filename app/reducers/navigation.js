@@ -4,7 +4,7 @@ import {
   NAVIGATION_INIT,
   NAVIGATION_POP,
   NAVIGATION_PUSH
-} from '../actions/navigation'
+} from '../actions/navigation';
 
 const { StateUtils: NavigationStateUtils } = NavigationExperimental;
 
