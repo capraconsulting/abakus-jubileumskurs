@@ -1,8 +1,8 @@
-import (
+import {
   ADD_BREW,
   REMOVE_BREW,
   SET_SELECTED_BREW
-) from '../actions/beerList';
+} from '../actions/beerList';
 
 const initialState = {
   brews: [

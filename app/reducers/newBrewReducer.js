@@ -1,11 +1,11 @@
-import (
+import {
   SET_ALCOHOL,
   SET_BREW_NAME,
   SET_BREW_TYPE,
   SET_BREWERY,
   SET_IMAGE,
   SET_RATING
-) from '../actions/newBrew';
+} from '../actions/newBrew';
 
 const initialState = {
   alcohol: '',
