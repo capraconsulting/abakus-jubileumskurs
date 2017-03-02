@@ -20,8 +20,7 @@ const initialState = [
     rating: 2,
     image: 'http://beerbikemunich.com/demo/slider/01.jpg'
   }
-]
-};
+];
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
