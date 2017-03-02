@@ -11,7 +11,7 @@ const TextInput = ({label, value, placeholder, onTextChange, required, errorMess
                onFocus={onFocus}
                onBlur={onBlur}/>
     {
-      required && value.trim() === '' ?
+      required && (value || '').trim() === '' ?
         <FormValidationMessage>{errorMessage}</FormValidationMessage> :
         null
     }

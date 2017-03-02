@@ -8,12 +8,12 @@ import {
 } from '../actions/newBrew';
 
 const initialState = {
-  alcohol: '',
-  brewery: '',
+  alcohol: 4.7,
+  brewery: 'Hansa',
   brewName: '',
   brewType: '',
   image: '',
-  rating: ''
+  rating: 3
 };
 
 export default function reducer(state = initialState, action) {

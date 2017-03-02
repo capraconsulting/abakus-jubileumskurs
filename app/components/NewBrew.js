@@ -6,49 +6,40 @@ import Button from '../elements/Button';
 import Slider from '../elements/Slider';
 import Picker from '../elements/Picker';
 
-const brewTypes = [
-  {label: 'Ale'},
-  {label: 'Brown Ale'},
-  {label: 'IPA'},
-  {label: 'Lager'},
-  {label: 'Pale Ale'},
-  {label: 'Porter'},
-  {label: 'Stout'},
-  {label: 'Other'}
-];
+import brewTypes from '../constants/brewTypes';
 
 export const NewBrew = props => (
   <View>
     <Text>Add new brew</Text>
     <TextInput
       label="Brew name"
-      value={''}
+      value={props.brewName}
       placeholder="e.g. Fatøl"
-      onTextChange={() => {}}
+      onTextChange={props.onBrewNameChanged}
       required={true}
       errorMessage="Required"/>
     <TextInput
       label="Brewery"
-      value={''}
+      value={props.brewery}
       placeholder="e.g. Dahls"
-      onTextChange={() => {}}
+      onTextChange={props.onBreweryChanged}
       required={true}
       errorMessage="Required"/>
     <Slider
       label="ABV (%)"
-      value={4.5}
-      onChange={() => {}}
+      value={props.alcohol}
+      onChange={props.onAlcoholChanged}
       min={0}
       max={96}/>
     <Picker
       label="Brew type"
       items={brewTypes}
-      selectedItem={undefined}
-      onSelect={() => {}} />
+      selectedItem={props.brewType}
+      onSelect={props.onBrewTypeChanged} />
     <Slider
       label="Rating (1-5)"
-      value={3}
-      onChange={() => {}}
+      value={props.rating}
+      onChange={props.onRatingChanged}
       min={1}
       max={5}/>
 
