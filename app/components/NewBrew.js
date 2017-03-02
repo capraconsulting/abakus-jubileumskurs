@@ -10,7 +10,6 @@ import brewTypes from '../constants/brewTypes';
 
 export const NewBrew = props => (
   <View>
-    <Text>Add new brew</Text>
     <TextInput
       label="Brew name"
       value={props.brewName}
@@ -43,10 +42,6 @@ export const NewBrew = props => (
       onChange={props.onRatingChanged}
       min={1}
       max={5}/>
-
-    <Button styles={{marginTop: 20}}
-            text='Add beer'
-            onClick={props.onNavigateBack}/>
   </View>
 );
 

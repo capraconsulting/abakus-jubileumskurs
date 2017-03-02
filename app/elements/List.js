@@ -1,13 +1,13 @@
 import React, { PropTypes } from 'react';
 import { List as ElementsList, ListItem } from 'react-native-elements';
 
-const List = ({items, titleKey, onClick}) => (
+const List = ({items, titleKey, onPress}) => (
   <ElementsList>
     {
       items.map((item, i) => (
         <ListItem key={i}
                   title={item[titleKey]}
-                  onClick={onClick} />
+                  onPress={() => onPress(i)} />
       ))
     }
   </ElementsList>
@@ -16,7 +16,7 @@ const List = ({items, titleKey, onClick}) => (
 List.propTypes = {
   items: PropTypes.array,
   titleKey: PropTypes.string,
-  onClick: PropTypes.func
+  onPress: PropTypes.func
 };
 
 List.defaultProps = {
