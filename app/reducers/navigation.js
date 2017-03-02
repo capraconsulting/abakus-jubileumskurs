@@ -1,6 +1,7 @@
 import { NavigationExperimental } from 'react-native';
 
 import {
+  NAVIGATION_INIT,
   NAVIGATION_POP,
   NAVIGATION_PUSH
 } from '../actions/navigation'
@@ -8,14 +9,20 @@ import {
 const { StateUtils: NavigationStateUtils } = NavigationExperimental;
 
 const initialState = {
-  index: 0, // initial focused route
-  routes: [
-    { key: 'initial', name: 'beerList' }
-  ],
+  index: -1, // dispatch navigation init to set initial route
+  routes: [],
 };
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
+    case NAVIGATION_INIT:
+      return {
+        index: 0,
+        routes: [
+          { key: 'initial', name: action.payload.routeName },
+        ],
+      };
+
     case NAVIGATION_POP:
       return NavigationStateUtils.pop(state);
 

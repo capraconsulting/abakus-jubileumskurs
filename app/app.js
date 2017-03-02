@@ -11,6 +11,7 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <Navigation
+          initialRoute='beerList'
           routes={{
             beerList: BeerListContainer,
             newBeer: NewBrewContainer

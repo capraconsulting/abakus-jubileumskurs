@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { BackAndroid, NavigationExperimental, StyleSheet, Text } from 'react-native';
 
-import { navigateBack } from '../actions/navigation'
+import { navigateBack, navigateFirst } from '../actions/navigation'
 
 const { CardStack: NavigationCardStack } = NavigationExperimental;
 
@@ -27,17 +27,27 @@ class NavigatorContainer extends Component {
       }
       return false;
     });
+
+    this.props.onNavigateFirst(this.props.initialRoute);
   }
 
   render() {
-    return (
-      <NavigationCardStack
-        onNavigateBack={this.props.onNavigateBack}
-        navigationState={this.props.navigationState}
-        renderScene={this._renderScene}
-        style={styles.navigator}
-      />
-    );
+
+    console.log(this.props.navigationState)
+
+    // For first render we have not yet added the initial route
+    if (this.props.navigationState.index >= 0) {
+      return (
+        <NavigationCardStack
+          onNavigateBack={this.props.onNavigateBack}
+          navigationState={this.props.navigationState}
+          renderScene={this._renderScene}
+          style={styles.navigator}
+        />
+      );
+    }
+
+    return null;
   }
 
   _renderScene(sceneProps) {
@@ -48,17 +58,20 @@ class NavigatorContainer extends Component {
 }
 
 NavigatorContainer.propTypes = {
+  initialRoute: React.PropTypes.string.isRequired,
   navigationState: React.PropTypes.object.isRequired,
   onNavigateBack: React.PropTypes.func.isRequired,
-  routes: React.PropTypes.objectOf(React.PropTypes.func).isRequired
+  onNavigateFirst: React.PropTypes.func.isRequired,
+  routes: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
 };
 
 const mapStateToProps = state => ({
-  navigationState: state.navigation
+  navigationState: state.navigation,
 });
 
 const mapDispatchToProps = ({
-  onNavigateBack: navigateBack
+  onNavigateBack: navigateBack,
+  onNavigateFirst: navigateFirst,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavigatorContainer);
