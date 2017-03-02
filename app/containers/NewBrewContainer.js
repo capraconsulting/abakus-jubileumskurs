@@ -5,13 +5,8 @@ import { navigateBack } from '../actions/navigation'
 import {setAlcohol, setBrewery, setBrewName, setBrewType, setImage, setRating} from '../actions/newBrew';
 import NewBrew from '../components/NewBrew'
 
-const mapStateToProps = ({alcohol, brewery, brewName, brewType, image, rating}) => ({
-  alcohol,
-  brewery,
-  brewName,
-  brewType,
-  image,
-  rating
+const mapStateToProps = state => ({
+  ...state.newBrew
 });
 
 const mapDispatchToProps = dispatch => ({

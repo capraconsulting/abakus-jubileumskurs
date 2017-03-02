@@ -2,10 +2,10 @@ import React, {PropTypes} from 'react';
 import {View, Text} from 'react-native';
 import {FormLabel, Slider as ElementsSlider} from 'react-native-elements'
 
-const Slider = ({label, value, onChange, min, max,}) => {
+const Slider = ({label, value, onChange, min, max, decimals = 0}) => {
   return (
     <View>
-      <FormLabel>{label}: <Text style={{fontWeight: 'bold'}}>{value}</Text></FormLabel>
+      <FormLabel>{label}: <Text style={{fontWeight: 'bold'}}>{value.toFixed(decimals)}</Text></FormLabel>
       <View style={{padding: 20, flex: 1, alignItems: 'stretch', justifyContent: 'center'}}>
         <ElementsSlider
           value={value}
@@ -24,6 +24,7 @@ Slider.propTypes = {
   onChange: PropTypes.func,
   min: PropTypes.number,
   max: PropTypes.number,
+  decimals: PropTypes.number,
   required: PropTypes.bool,
   errorMessage: PropTypes.string,
   onFocus: PropTypes.func,

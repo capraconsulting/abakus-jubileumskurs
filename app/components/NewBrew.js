@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {PropTypes} from 'react'
 import {Text, View} from 'react-native';
 
 import TextInput from '../elements/TextInput';
@@ -30,7 +30,8 @@ export const NewBrew = props => (
       value={props.alcohol}
       onChange={props.onAlcoholChanged}
       min={0}
-      max={96}/>
+      max={96}
+      decimals={1}/>
     <Picker
       label="Brew type"
       items={brewTypes}
@@ -50,7 +51,19 @@ export const NewBrew = props => (
 );
 
 NewBrew.propTypes = {
-  onNavigateBack: React.PropTypes.func.isRequired,
+  alcohol: PropTypes.number,
+  brewery: PropTypes.string,
+  brewName: PropTypes.string,
+  brewType: PropTypes.string,
+  image: PropTypes.string,
+  rating: PropTypes.number,
+  onAlcoholChanged: PropTypes.func.isRequired,
+  onBreweryChanged: PropTypes.func.isRequired,
+  onBrewNameChanged: PropTypes.func.isRequired,
+  onBrewTypeChanged: PropTypes.func.isRequired,
+  onImageChanged: PropTypes.func.isRequired,
+  onRatingChanged: PropTypes.func.isRequired,
+  onNavigateBack: PropTypes.func.isRequired,
 };
 
 export default NewBrew;
