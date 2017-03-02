@@ -50,7 +50,7 @@ class NavigatorContainer extends Component {
 NavigatorContainer.propTypes = {
   navigationState: React.PropTypes.object.isRequired,
   onNavigateBack: React.PropTypes.func.isRequired,
-  routes: React.PropTypes.objectOf(React.PropTypes.node).isRequired
+  routes: React.PropTypes.objectOf(React.PropTypes.func).isRequired
 };
 
 const mapStateToProps = state => ({
