@@ -14,7 +14,7 @@ export const BeerList = ({beerList, navigateToNewForm}) => (
       onClick={navigateToNewForm}
     />
     <List
-      items={beerList.brews}
+      items={beerList}
       titleKey='brewName'
       onClick={() => {}}
     />
@@ -22,7 +22,7 @@ export const BeerList = ({beerList, navigateToNewForm}) => (
 );
 
 BeerList.propTypes = {
-  beerList: React.PropTypes.object.isRequired,
+  beerList: React.PropTypes.array.isRequired,
   navigateToNewForm: React.PropTypes.func.isRequired,
 };
 
