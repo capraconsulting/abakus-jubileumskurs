@@ -8,42 +8,73 @@ import Picker from '../elements/Picker';
 
 import brewTypes from '../constants/brewTypes';
 
-export const NewBrew = props => (
-  <View>
-    <TextInput
-      label="Brew name"
-      value={props.brewName}
-      placeholder="e.g. Fatøl"
-      onTextChange={props.onBrewNameChanged}
-      required={true}
-      errorMessage="Required"/>
-    <TextInput
-      label="Brewery"
-      value={props.brewery}
-      placeholder="e.g. Dahls"
-      onTextChange={props.onBreweryChanged}
-      required={true}
-      errorMessage="Required"/>
-    <Slider
-      label="ABV (%)"
-      value={props.alcohol}
-      onChange={props.onAlcoholChanged}
-      min={0}
-      max={96}
-      decimals={1}/>
-    <Picker
-      label="Brew type"
-      items={brewTypes}
-      selectedItem={props.brewType}
-      onSelect={props.onBrewTypeChanged} />
-    <Slider
-      label="Rating (1-5)"
-      value={props.rating}
-      onChange={props.onRatingChanged}
-      min={1}
-      max={5}/>
-  </View>
-);
+function validateNewBrew(brew) {
+  const brewNameValid = brew.brewName && brew.brewName.trim().length > 0;
+  const breweryValid = brew.brewery && brew.brewery.trim().length > 0;
+  return brewNameValid && breweryValid;
+}
+
+export const NewBrew = props => {
+
+  const {brewName, brewery, alcohol, brewType, rating} = props;
+  const {onBrewNameChanged, onBreweryChanged, onAlcoholChanged, onBrewTypeChanged, onRatingChanged} = props;
+  const {onSaveBrew, navigation} = props;
+
+  const onAddBrewClick = () => {
+    const newBrew = {
+      brewName,
+      brewery,
+      alcohol,
+      brewType,
+      rating,
+    };
+    if(validateNewBrew(newBrew)) {
+      onSaveBrew(newBrew);
+      navigation.goBack();
+    }
+  };
+
+  return (
+    <View>
+      <TextInput
+        label="Brew name"
+        value={brewName}
+        placeholder="e.g. Dahls Pils"
+        onTextChange={onBrewNameChanged}
+        required={true}
+        errorMessage="Required"/>
+      <TextInput
+        label="Brewery"
+        value={brewery}
+        placeholder="e.g. E.C Dahls Bryggeri"
+        onTextChange={onBreweryChanged}
+        required={true}
+        errorMessage="Required"/>
+      <Slider
+        label="ABV (%)"
+        value={alcohol}
+        onChange={onAlcoholChanged}
+        min={0}
+        max={96}
+        decimals={1}/>
+      <Picker
+        label="Brew type"
+        items={brewTypes}
+        selectedItem={brewType}
+        onSelect={onBrewTypeChanged} />
+      <Slider
+        label="Rating (1-5)"
+        value={rating}
+        onChange={onRatingChanged}
+        min={1}
+        max={5}/>
+
+      <Button styles={{marginTop: 20}}
+              text='Add beer'
+              onClick={onAddBrewClick}/>
+    </View>
+  );
+};
 
 NewBrew.propTypes = {
   alcohol: PropTypes.number,
@@ -59,6 +90,8 @@ NewBrew.propTypes = {
   onImageChanged: PropTypes.func.isRequired,
   onRatingChanged: PropTypes.func.isRequired,
   onNavigateBack: PropTypes.func.isRequired,
+  onSaveBrew: PropTypes.func.isRequired,
+  navigation: PropTypes.any
 };
 
 export default NewBrew;

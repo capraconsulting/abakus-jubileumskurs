@@ -2,22 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
 
-import HeaderButton from '../elements/HeaderButton'
 import {setAlcohol, setBrewery, setBrewName, setBrewType, setImage, setRating} from '../actions/newBrew';
+import {addBrew} from '../actions/beerList';
 import NewBrew from '../components/NewBrew'
 
-const NewBrewContainer = props => <NewBrew {...props} />
+const NewBrewContainer = props => <NewBrew {...props} />;
 
 NewBrewContainer.navigationOptions = {
-  title: 'New brew',
-  header: ({ state, navigate }) => ({
-    right: (
-      <HeaderButton
-        title='Add'
-        onPress={() => navigate('beerList')}
-      />
-    ),
-  }),
+  title: 'New brew'
 };
 
 const mapStateToProps = state => ({
@@ -31,7 +23,8 @@ const mapDispatchToProps = dispatch => ({
   onBrewNameChanged: (value) => dispatch(setBrewName(value)),
   onBrewTypeChanged: (value) => dispatch(setBrewType(value)),
   onImageChanged: (value) => dispatch(setImage(value)),
-  onRatingChanged: (value) => dispatch(setRating(value))
+  onRatingChanged: (value) => dispatch(setRating(value)),
+  onSaveBrew: (brew) => dispatch(addBrew(brew)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewBrewContainer);
