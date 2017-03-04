@@ -11,7 +11,7 @@ import {brewTypes, BrewType} from '../constants/brewTypes';
 function validateNewBrew(brew) {
   const brewNameValid = brew.brewName && brew.brewName.trim().length > 0;
   const breweryValid = brew.brewery && brew.brewery.trim().length > 0;
-  return brewNameValid && breweryValid;
+  return !!brewNameValid && !!breweryValid;
 }
 
 export const NewBrew = props => {
@@ -28,10 +28,9 @@ export const NewBrew = props => {
       brewType,
       rating,
     };
-    if(validateNewBrew(newBrew)) {
-      onSaveBrew(newBrew);
-      navigation.goBack();
-    }
+
+    onSaveBrew(newBrew);
+    navigation.goBack();
   };
 
   return (
@@ -62,7 +61,7 @@ export const NewBrew = props => {
         label="Brew type"
         labelAs={'name'}
         selectedItem={brewType}
-        onSelect={onBrewTypeChanged} />
+        onSelect={onBrewTypeChanged}/>
       <Slider
         label="Rating (1-5)"
         value={rating}
@@ -72,7 +71,8 @@ export const NewBrew = props => {
 
       <Button styles={{marginTop: 20}}
               text='Add brew'
-              onClick={onAddBrewClick}/>
+              onClick={onAddBrewClick}
+              disabled={!validateNewBrew({brewName, brewery})}/>
     </View>
   );
 };
