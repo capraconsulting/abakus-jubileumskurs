@@ -9,9 +9,9 @@ import {
 
 const initialState = {
   alcohol: 4.7,
-  brewery: 'Hansa',
+  brewery: '',
   brewName: '',
-  brewType: '',
+  brewType: undefined,
   image: '',
   rating: 3
 };

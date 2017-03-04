@@ -6,7 +6,7 @@ import Button from '../elements/Button';
 import Slider from '../elements/Slider';
 import Picker from '../elements/Picker';
 
-import brewTypes from '../constants/brewTypes';
+import {brewTypes, BrewType} from '../constants/brewTypes';
 
 function validateNewBrew(brew) {
   const brewNameValid = brew.brewName && brew.brewName.trim().length > 0;
@@ -58,8 +58,9 @@ export const NewBrew = props => {
         max={96}
         decimals={1}/>
       <Picker
-        label="Brew type"
         items={brewTypes}
+        label="Brew type"
+        labelAs={'name'}
         selectedItem={brewType}
         onSelect={onBrewTypeChanged} />
       <Slider
@@ -80,7 +81,7 @@ NewBrew.propTypes = {
   alcohol: PropTypes.number,
   brewery: PropTypes.string,
   brewName: PropTypes.string,
-  brewType: PropTypes.string,
+  brewType: PropTypes.instanceOf(BrewType),
   image: PropTypes.string,
   rating: PropTypes.number,
   onAlcoholChanged: PropTypes.func.isRequired,

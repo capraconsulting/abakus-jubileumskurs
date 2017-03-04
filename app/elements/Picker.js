@@ -5,13 +5,14 @@ import Colors from '../constants/colors';
 
 const Item = NativePicker.Item;
 
-const renderItems = (items) => {
+const renderItems = (items, labelAs) => {
   return items.map((item, index) => {
-    return <Item label={item.label} value={item} key={index}/>
+    const label = typeof item === "string" ? item : item[labelAs];
+    return <Item label={label} value={item} key={index}/>
   });
 };
 
-const Picker = ({label, items, selectedItem, onSelect}) => {
+const Picker = ({items, label, labelAs, selectedItem, onSelect}) => {
   return (
     <View>
       <FormLabel>{label}</FormLabel>
@@ -19,25 +20,30 @@ const Picker = ({label, items, selectedItem, onSelect}) => {
         style={{marginLeft: 12, marginRight: 20, borderBottomColor: Colors.BLACK}}
         selectedValue={selectedItem}
         onValueChange={onSelect}>
-        {renderItems(items)}
+        {renderItems(items, labelAs)}
       </NativePicker>
     </View>
   );
 };
 
 Picker.propTypes = {
-  label: PropTypes.string,
   items: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string.isRequired
-    })
+    PropTypes.oneOfType([
+      PropTypes.object,
+      PropTypes.string
+    ])
   ),
-  selectedItem: PropTypes.shape(
-    PropTypes.shape({
-      label: PropTypes.string.isRequired
-    })
-  ),
-  onSelect: PropTypes.func
+  label: PropTypes.string,
+  labelAs: PropTypes.string,
+  onSelect: PropTypes.func,
+  selectedItem: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.string
+  ])
+};
+
+Picker.defaultProps = {
+  labelAs: 'label'
 };
 
 export default Picker;
