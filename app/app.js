@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-import BeerListContainer from './containers/BeerListContainer';
+import BrewListContainer from './containers/BrewListContainer';
 import BrewContainer from './containers/BrewContainer';
 import NewBrewContainer from './containers/NewBrewContainer';
 import NavigationContainer from './containers/NavigatorContainer';
@@ -17,11 +17,11 @@ import NavigationContainer from './containers/NavigatorContainer';
  * TODO: should probably be in a seperate file
  */
 export const AppNavigator = StackNavigator({
-  beerList: { screen: BeerListContainer },
+  brewList: { screen: BrewListContainer },
   newBrew: { screen: NewBrewContainer },
   brew: { screen: BrewContainer },
 }, {
-  initialRouteName: 'beerList',
+  initialRouteName: 'brewList',
 });
 
 class App extends Component {

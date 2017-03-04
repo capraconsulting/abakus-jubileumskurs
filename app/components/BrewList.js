@@ -7,18 +7,18 @@ import List from '../elements/List';
 import Icon from '../elements/Icon';
 import Image from '../elements/Image';
 
-export const BeerList = ({beerList, navigateToNewForm, navigateToBrew}) => (
+export const BrewList = ({brewList, navigateToNewForm, navigateToBrew}) => (
   <View style={styles.container}>
     <List
-      items={beerList}
+      items={brewList}
       titleKey='brewName'
       onPress={index => navigateToBrew(index)}
     />
   </View>
 );
 
-BeerList.propTypes = {
-  beerList: React.PropTypes.array.isRequired,
+BrewList.propTypes = {
+  brewList: React.PropTypes.array.isRequired,
   navigateToNewForm: React.PropTypes.func.isRequired,
   navigateToBrew: React.PropTypes.func.isRequired,
 };
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default BeerList;
+export default BrewList;

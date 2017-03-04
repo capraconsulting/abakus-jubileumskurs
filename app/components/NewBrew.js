@@ -71,7 +71,7 @@ export const NewBrew = props => {
         max={5}/>
 
       <Button styles={{marginTop: 20}}
-              text='Add beer'
+              text='Add brew'
               onClick={onAddBrewClick}/>
     </View>
   );

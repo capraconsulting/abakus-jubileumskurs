@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
 
 import HeaderButton from '../elements/HeaderButton'
-import BeerList from '../components/BeerList'
+import BrewList from '../components/BrewList'
 
-const BeerListContainer = props => <BeerList {...props} />;
+const BrewListContainer = props => <BrewList {...props} />;
 
-BeerListContainer.navigationOptions = {
+BrewListContainer.navigationOptions = {
   title: 'Brew list',
   header: ({ state, navigate }) => ({
     right: (
@@ -20,7 +20,7 @@ BeerListContainer.navigationOptions = {
 };
 
 const mapStateToProps = state => ({
-  beerList: state.beerList
+  brewList: state.brewList
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -28,4 +28,4 @@ const mapDispatchToProps = dispatch => ({
   navigateToBrew: index => dispatch(NavigationActions.navigate({ routeName: 'brew', params: { index }}))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(BeerListContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(BrewListContainer);

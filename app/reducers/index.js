@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 
-import beerList from './beerListReducer';
+import brewList from './brewListReducer';
 import navigation from './navigation';
 import newBrew from './newBrewReducer';
 
 export default combineReducers({
-  beerList,
+  brewList,
   navigation,
   newBrew
 });

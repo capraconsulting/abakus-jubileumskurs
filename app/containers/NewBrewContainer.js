@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
 
 import {setAlcohol, setBrewery, setBrewName, setBrewType, setImage, setRating} from '../actions/newBrew';
-import {addBrew} from '../actions/beerList';
+import {addBrew} from '../actions/brewList';
 import NewBrew from '../components/NewBrew'
 
 const NewBrewContainer = props => <NewBrew {...props} />;

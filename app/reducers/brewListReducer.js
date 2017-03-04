@@ -1,7 +1,7 @@
 import {
   ADD_BREW,
   REMOVE_BREW
-} from '../actions/beerList';
+} from '../actions/brewList';
 
 const initialState = [
   {
