@@ -6,13 +6,23 @@ export class BrewType {
   }
 }
 
+export const ALE = new BrewType('Ale'),
+  BROWN_ALE = new BrewType('Brown Ale'),
+  IPA = new BrewType('IPA'),
+  LAGER = new BrewType('Lager'),
+  PALE_ALE = new BrewType('Pale Ale'),
+  PORTER = new BrewType('Porter'),
+  STOUT = new BrewType('Stout'),
+  OTHER = new BrewType('Other');
+
+
 export const brewTypes = [
-  new BrewType('Ale'),
-  new BrewType('Brown Ale'),
-  new BrewType('IPA'),
-  new BrewType('Lager'),
-  new BrewType('Pale Ale'),
-  new BrewType('Porter'),
-  new BrewType('Stout'),
-  new BrewType('Other')
+  ALE,
+  BROWN_ALE,
+  IPA,
+  LAGER,
+  PALE_ALE,
+  PORTER,
+  STOUT,
+  OTHER
 ];

@@ -7,5 +7,7 @@ export default {
   LIST: {name: 'list', type: FONT_AWESOME},
   MINUS: {name: 'minus', type: FONT_AWESOME},
   PERCENT: {name: 'percent', type: FONT_AWESOME},
-  PLUS: {name: 'plus', type: FONT_AWESOME}
+  PLUS: {name: 'plus', type: FONT_AWESOME},
+  STAR: {name: 'star', type: FONT_AWESOME},
+  STAR_O: {name: 'star-o', type: FONT_AWESOME}
 }

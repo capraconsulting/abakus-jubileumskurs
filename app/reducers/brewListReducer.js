@@ -3,22 +3,24 @@ import {
   REMOVE_BREW
 } from '../actions/brewList';
 
+import {OTHER} from '../constants/brewTypes';
+
 const initialState = [
   {
     brewName: 'Fatøl',
     brewery: 'Hansa',
     alcohol: 4.7,
-    brewType: 'Fatøl',
+    brewType: OTHER,
     rating: 4,
-    image: 'http://beerbikemunich.com/demo/slider/01.jpg'
+    image: 'https://pbs.twimg.com/media/CzW9RBZXUAAK43q.jpg'
   },
   {
     brewName: 'Pilsner',
     brewery: 'Ringnes',
     alcohol: 4.7,
-    brewType: 'Pilsner',
+    brewType: OTHER,
     rating: 2,
-    image: 'http://beerbikemunich.com/demo/slider/01.jpg'
+    image: 'https://pbs.twimg.com/media/CzW9RBZXUAAK43q.jpg'
   }
 ];
 

@@ -9,7 +9,9 @@ const TextInput = ({label, value, placeholder, onTextChange, required, errorMess
                value={value}
                onChangeText={onTextChange}
                onFocus={onFocus}
-               onBlur={onBlur}/>
+               onBlur={onBlur}
+               inputStyle={{color: 'black'}}
+               returnKeyType="next"/>
     {
       required && (value || '').trim() === '' ?
         <FormValidationMessage>{errorMessage}</FormValidationMessage> :

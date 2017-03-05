@@ -7,11 +7,13 @@ import {
   SET_RATING
 } from '../actions/newBrew';
 
+import {brewTypes} from '../constants/brewTypes';
+
 const initialState = {
   alcohol: 4.7,
   brewery: '',
   brewName: '',
-  brewType: undefined,
+  brewType: brewTypes[0],
   image: '',
   rating: 3
 };
