@@ -4,6 +4,7 @@ export const SET_BREW_TYPE = 'SET_BREW_TYPE';
 export const SET_BREWERY = 'SET_BREWERY';
 export const SET_IMAGE = 'SET_IMAGE';
 export const SET_RATING = 'SET_RATING';
+export const RESET_FORM =  'RESET_FORM';
 
 export const setAlcohol = alcohol => ({
   type: SET_ALCOHOL,
@@ -33,4 +34,8 @@ export const setImage = image => ({
 export const setRating = rating => ({
   type: SET_RATING,
   rating
+});
+
+export const resetForm = () => ({
+  type: RESET_FORM
 });

@@ -4,7 +4,8 @@ import {
   SET_BREW_TYPE,
   SET_BREWERY,
   SET_IMAGE,
-  SET_RATING
+  SET_RATING,
+  RESET_FORM
 } from '../actions/newBrew';
 
 import {brewTypes} from '../constants/brewTypes';
@@ -50,6 +51,8 @@ export default function reducer(state = initialState, action) {
         ...state,
         rating: action.rating
       };
+    case RESET_FORM:
+      return initialState;
     default:
       return state;
   }
