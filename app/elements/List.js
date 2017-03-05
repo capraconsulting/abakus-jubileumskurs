@@ -4,10 +4,10 @@ import { List as ElementsList, ListItem } from 'react-native-elements';
 const List = ({items, titleKey, onPress}) => (
   <ElementsList>
     {
-      items.map((item, i) => (
-        <ListItem key={i}
+      items.map((item, index) => (
+        <ListItem key={index}
                   title={item[titleKey]}
-                  onPress={() => onPress(i)} />
+                  onPress={() => onPress(item, index)} />
       ))
     }
   </ElementsList>

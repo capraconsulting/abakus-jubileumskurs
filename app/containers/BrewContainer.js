@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { NavigationActions } from 'react-navigation';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {NavigationActions} from 'react-navigation';
 
 import Brew from '../components/Brew';
 
 const BrewContainer = props => <Brew {...props} />;
 
 BrewContainer.navigationOptions = {
-  // TODO: how to inject the actual brew name here?
-  title: 'Brew',
+  title: ({state}) => state.params.brewName
 };
 
 const mapStateToProps = (state, ownProps) => ({
