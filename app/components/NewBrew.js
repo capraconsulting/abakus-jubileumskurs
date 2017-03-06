@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react'
 import {Text, View, Image, TouchableOpacity} from 'react-native';
+import icons from '../constants/icons';
 
 import TextInput from '../elements/TextInput';
 import Button from '../elements/Button';
@@ -77,10 +78,9 @@ export const NewBrew = props => {
         onChange={onRatingChanged}
         min={1}
         max={5}/>
-      <TouchableOpacity
-          onPress={props.onPickImagePressed}>
-        <Text>Ta bilde</Text>
-      </TouchableOpacity>
+      <Button text='Take Picture'
+              onClick={props.onPickImagePressed}
+              icon={icons.CAMERA}/>
       <Image source={image.source}/>
       <Button styles={{marginTop: 20}}
               text='Add brew'
