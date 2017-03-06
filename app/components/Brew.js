@@ -20,19 +20,11 @@ function renderRating(rating) {
 
 export const Brew = ({brew}) => (
   <View>
-    <Card title={brew.brewName}>
-      <Text>Brewery: {brew.brewery}</Text>
-      <Text>Brew type: {brew.brewType}</Text>
-      <Text>Alcohol: {brew.alcohol.toFixed(1)}%</Text>
-      <View style={{
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginTop: 10
-      }}>
-        {renderRating(brew.rating)}
-      </View>
-    </Card>
+    {/*
+    steg 3:
+    vis informasjon om en brew - se propTypes for input
+    hint: bruk Card og Text. View kan benyttes med flex for å få stjerner
+    */}
   </View>
 );
 
