@@ -22,7 +22,7 @@ export const Brew = ({brew}) => (
   <View>
     <Card title={brew.brewName}>
       <Text>Brewery: {brew.brewery}</Text>
-      <Text>Brew type: {brew.brewType.name}</Text>
+      <Text>Brew type: {brew.brewType}</Text>
       <Text>Alcohol: {brew.alcohol.toFixed(1)}%</Text>
       <View style={{
         flex: 1,
@@ -41,7 +41,7 @@ Brew.propTypes = {
     alcohol: PropTypes.number,
     brewery: PropTypes.string,
     brewName: PropTypes.string,
-    brewType: PropTypes.instanceOf(BrewType),
+    brewType: PropTypes.string,
     image: PropTypes.string,
     rating: PropTypes.number
   })
