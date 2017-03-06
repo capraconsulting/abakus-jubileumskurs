@@ -17,8 +17,17 @@ export const BrewList = ({brewList, navigateToNewForm, navigateToBrew}) => (
   </View>
 );
 
+const brewPropTypes = React.PropTypes.shape({
+  brewName: React.PropTypes.string.isRequired,
+  brewery: React.PropTypes.string.isRequired,
+  alcohol: React.PropTypes.number.isRequired,
+  brewType: React.PropTypes.string.isRequired, // e.g. OTHER
+  rating: React.PropTypes.number.isRequired,
+  image: React.PropTypes.string,
+});
+
 BrewList.propTypes = {
-  brewList: React.PropTypes.array.isRequired,
+  brewList: React.PropTypes.arrayOf(brewPropTypes).isRequired,
   navigateToNewForm: React.PropTypes.func.isRequired,
   navigateToBrew: React.PropTypes.func.isRequired,
 };

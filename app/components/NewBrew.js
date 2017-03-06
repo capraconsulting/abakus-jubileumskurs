@@ -18,6 +18,8 @@ export const NewBrew = props => {
 
   const {brewName, brewery, alcohol, brewType, rating} = props;
   const {onBrewNameChanged, onBreweryChanged, onAlcoholChanged, onBrewTypeChanged, onRatingChanged} = props;
+
+  // FIXME: fjern neste linje
   const {onSaveBrew, navigation} = props;
 
   const onAddBrewClick = () => {
@@ -29,8 +31,14 @@ export const NewBrew = props => {
       rating,
     };
 
-    onSaveBrew(newBrew);
-    navigation.goBack();
+    // FIXME: fjern neste to linjer
+    props.onSaveBrew(newBrew);
+    props.navigation.goBack();
+    // steg 2: kall props.onSaveBrew(newBrew);
+    // steg 2: kall props.navigation.goBack(); for å gå tilbake til listevisning etter øl er lagt til
+
+    // FIXME: fjern kommentar neste linje
+    //alert("Du trykket lagre knappen for ølen med navn " + newBrew.brewName + "!");
   };
 
   return (
