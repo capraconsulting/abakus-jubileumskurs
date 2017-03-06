@@ -29,7 +29,6 @@ export const NewBrew = props => {
       alcohol,
       brewType,
       rating,
-    } = props;
 
     // FIXME: fjern neste to linjer
     props.onSaveBrew(newBrew);
