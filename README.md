@@ -1,7 +1,5 @@
 # Velkommen til jubileumskurs
 
-# Getting started
-
 Vi skal lage en applikasjonen som holder styr på enkeltinvidets ølsamling. (untapped (https://untappd.com/))
 En bruker skal kunne legge inn nye øl, samt se en oversikt over øl som er lagt inn.
 
@@ -48,9 +46,7 @@ I neste steg utvider vi dette til at man får en liste over innlagte øl.
 
 ## Steg 2: Presentere liste over innlagte øl
 
-![Skjerm for å legge inn ny øl](images/brew_list.PNG)
-
-TODO: Hvilke filer skal endres?
+![Liste over øl](images/brew_list.PNG)
 
 Utvid filen `component/BrewList.js`. Her kan du benytte `elements/List`-komponenten som hjelper
 deg med å presentere en ferdig liste hvis du sender inn korrekte props.
@@ -70,6 +66,26 @@ noen hint for å hjelpe deg.
 
 ## Steg 3: Vise detaljer for en øl
 
-![Skjerm for å legge inn ny øl](images/brew.PNG)
+![Informasjon om en øl](images/brew.PNG)
 
+For å kunne se mer detaljer om en øl ønsker vi å kunne gå inn på detaljvisning. Vi har laget
+en egen screen med komponenten `Brew.js` som kan utvides til å vise detaljer om en øl som
+sendes inn som props.
 
+For å navigere til denne komponenten har vi laget en hjelpemetode i `BrewList.js` som heter
+`navigateToBrew(brewName, index)` som kan kalles. Da blir man sendt til `Brew.js` med
+`brew` som prop.
+
+Navigasjonskomponenten som følger med sørger for at du allerede har en tilbakeknapp.
+
+## Steg 4: Fritt frem
+
+Hvis du har kommet så langt som dette så står du fritt til å prøve og utforske mer i
+React Native. Det vil sannsynligvis kreve forståelse av Redux som benyttes for å
+lagre tilstand og koble applikasjonen sammen.
+
+Ideer du kan prøve på:
+
+- Redigere øl
+- Slette øl
+- Ta bilde av en øl og legge inn
