@@ -25,7 +25,7 @@ For å starte applikasjonen:
   (Windows/Linux) eller `Cmd+D` (Mac) og trykk `Reload`
 
 Nå kan du endre kode i `app`-mappen. Reload applikasjonen som nevnt over eller
-aktiver `Enable Live Reload` i menyen for at dette skjer automatisk ved endringer.
+aktiver `Enable Hot Reloading` i menyen for at dette skjer automatisk ved endringer.
 
 Hvis du står fast og trenger hjelp, eller vil se hvordan vi har løst de forskjellige stegene,
 kan du titte i branchen med navn
