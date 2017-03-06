@@ -12,7 +12,7 @@ BrewListContainer.navigationOptions = {
   header: ({state, navigate}) => ({
     right: (
       <HeaderButton
-        title='Add new brew'
+        title='New brew'
         onPress={() => navigate('newBrew')}
       />
     ),

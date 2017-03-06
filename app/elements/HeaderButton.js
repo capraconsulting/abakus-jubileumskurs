@@ -21,7 +21,7 @@ HeaderButton.propTypes = {
 
 HeaderButton.defaultProps = {
   color: colors.DARK_BLUE,
-  backgroundColor: 'white',
+  backgroundColor: 'transparent',
 };
 
 export default HeaderButton;
