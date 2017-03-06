@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react'
-import {Text, View} from 'react-native';
+import {Text, View, Image, TouchableOpacity} from 'react-native';
 
 import TextInput from '../elements/TextInput';
 import Button from '../elements/Button';
@@ -77,7 +77,11 @@ export const NewBrew = props => {
         onChange={onRatingChanged}
         min={1}
         max={5}/>
-
+      <TouchableOpacity
+          onPress={props.onPickImagePressed}>
+        <Text>Ta bilde</Text>
+      </TouchableOpacity>
+      <Image source={image.source}/>
       <Button styles={{marginTop: 20}}
               text='Add brew'
               onClick={onAddBrewClick}
@@ -101,7 +105,8 @@ NewBrew.propTypes = {
   onRatingChanged: PropTypes.func.isRequired,
   onNavigateBack: PropTypes.func.isRequired,
   onSaveBrew: PropTypes.func.isRequired,
-  navigation: PropTypes.any
+  navigation: PropTypes.any,
+  onPickImagePressed: React.PropTypes.func.isRequired
 };
 
 export default NewBrew;
