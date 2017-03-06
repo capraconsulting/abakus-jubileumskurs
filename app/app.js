@@ -21,7 +21,7 @@ export const AppNavigator = StackNavigator({
   newBrew: { screen: NewBrewContainer },
   brew: { screen: BrewContainer },
 }, {
-  initialRouteName: 'newBrew', // Steg 2: her kan hvilke skjermbilde som skal vises når appen starter
+  initialRouteName: 'newBrew', // Steg 2: her bestemmes hvilket skjermbilde som skal vises når appen starter
 });
 
 class App extends Component {
