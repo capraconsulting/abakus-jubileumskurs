@@ -3,14 +3,12 @@ import {
   REMOVE_BREW
 } from '../actions/brewList';
 
-import {OTHER} from '../constants/brewTypes';
-
 const initialState = [
   {
     brewName: 'Fatøl',
     brewery: 'Hansa',
     alcohol: 4.7,
-    brewType: OTHER,
+    brewType: 'Other',
     rating: 4,
     image: 'https://pbs.twimg.com/media/CzW9RBZXUAAK43q.jpg'
   },
@@ -18,7 +16,7 @@ const initialState = [
     brewName: 'Pilsner',
     brewery: 'Ringnes',
     alcohol: 4.7,
-    brewType: OTHER,
+    brewType: 'Other',
     rating: 2,
     image: 'https://pbs.twimg.com/media/CzW9RBZXUAAK43q.jpg'
   }
