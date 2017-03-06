@@ -59,7 +59,6 @@ export const NewBrew = props => {
       <Picker
         items={brewTypes}
         label="Brew type"
-        labelAs={'name'}
         selectedItem={brewType}
         onSelect={onBrewTypeChanged}/>
       <Slider
@@ -81,7 +80,7 @@ NewBrew.propTypes = {
   alcohol: PropTypes.number,
   brewery: PropTypes.string,
   brewName: PropTypes.string,
-  brewType: PropTypes.instanceOf(BrewType),
+  brewType: PropTypes.string,
   image: PropTypes.string,
   rating: PropTypes.number,
   onAlcoholChanged: PropTypes.func.isRequired,
