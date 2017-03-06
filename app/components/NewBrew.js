@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react'
-import {Text, ScrollView, Image, TouchableOpacity} from 'react-native';
+import {Text, ScrollView, View, Image, TouchableOpacity} from 'react-native';
 import icons from '../constants/icons';
 
 import TextInput from '../elements/TextInput';
@@ -80,11 +80,11 @@ export const NewBrew = props => {
         max={5}/>
       <Button text='Take Picture'
               onClick={props.onPickImagePressed}
-              icon={icons.CAMERA}
-              styles={{marginBottom: 20}}/>
-      <Image source={image.source} />
-      <Button styles={{marginTop: 20}}
-              text='Add brew'
+              icon={icons.CAMERA}/>
+      <View style={{marginTop: 20}}>
+        <Image source={image.source} />
+      </View>
+      <Button text='Add brew'
               onClick={onAddBrewClick}
               disabled={!validateNewBrew({brewName, brewery})}/>
     </ScrollView>
