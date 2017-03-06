@@ -6,7 +6,7 @@ import Button from '../elements/Button';
 import Slider from '../elements/Slider';
 import Picker from '../elements/Picker';
 
-import {brewTypes, BrewType} from '../constants/brewTypes';
+import {brewTypes} from '../constants/brewTypes';
 
 function validateNewBrew(brew) {
   const brewNameValid = brew.brewName && brew.brewName.trim().length > 0;
@@ -29,7 +29,7 @@ export const NewBrew = props => {
       alcohol,
       brewType,
       rating,
-    };
+    } = props;
 
     // FIXME: fjern neste to linjer
     props.onSaveBrew(newBrew);
@@ -43,7 +43,7 @@ export const NewBrew = props => {
 
   return (
     // steg 1: Her kan man legge inn de forskjellige input-elementene som trengs for å legge til en ny brew
-    // Tips: Bruk komponentene TextInput, Slider og Picker fra /elements-mappen 
+    // Tips: Bruk komponentene TextInput, Slider og Picker fra /elements-mappen
     <View>
       <TextInput
         label="Brew name"
