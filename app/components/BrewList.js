@@ -9,11 +9,8 @@ import Image from '../elements/Image';
 
 export const BrewList = ({brewList, navigateToNewForm, navigateToBrew}) => (
   <View style={styles.container}>
-    <List
-      items={brewList}
-      titleKey='brewName'
-      onPress={(brew, index) => navigateToBrew(brew.brewName, index)}
-    />
+    // Steg 2: Legg inn en liste med brews.
+    // navigateToBrew(brewName, index) kan brukes som onPress metode for elementene i listen
   </View>
 );
 
@@ -21,7 +18,7 @@ const brewPropTypes = React.PropTypes.shape({
   brewName: React.PropTypes.string.isRequired,
   brewery: React.PropTypes.string.isRequired,
   alcohol: React.PropTypes.number.isRequired,
-  brewType: React.PropTypes.string.isRequired, // e.g. OTHER
+  brewType: React.PropTypes.string.isRequired,
   rating: React.PropTypes.number.isRequired,
   image: React.PropTypes.string,
 });

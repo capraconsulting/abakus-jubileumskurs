@@ -10,15 +10,10 @@ const BrewListContainer = props => <BrewList {...props} />;
 BrewListContainer.navigationOptions = {
   title: 'Brew list',
   header: ({state, navigate}) => ({
-    right: (
-      // Her trenger vi en knapp som kaller på navigate('newBrew') for å gå til skjema for ny øl
-      // Du kan skrive JSX-element direkte her. Tips: Se HeaderButton
-      // FIXME: fjerne i branch
-      <HeaderButton
-        title='New brew'
-        onPress={() => navigate('newBrew')}
-      />
-    ),
+    // right: (
+    //   Her trenger vi en knapp som kaller på navigate('newBrew') for å gå til skjema for ny øl
+    //   Du kan skrive JSX-element direkte her. Tips: Se HeaderButton
+    // ),
   }),
 };
 

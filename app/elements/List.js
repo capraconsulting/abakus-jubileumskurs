@@ -15,12 +15,13 @@ const List = ({items, titleKey, onPress}) => (
 
 List.propTypes = {
   items: PropTypes.array,
-  titleKey: PropTypes.string,
+  titleKey: PropTypes.string.isRequired,
   onPress: PropTypes.func
 };
 
 List.defaultProps = {
-  items: []
+  items: [],
+  titleKey: 'brewName'
 };
 
 export default List;

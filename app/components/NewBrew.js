@@ -16,12 +16,6 @@ function validateNewBrew(brew) {
 
 export const NewBrew = props => {
 
-  const {brewName, brewery, alcohol, brewType, rating} = props;
-  const {onBrewNameChanged, onBreweryChanged, onAlcoholChanged, onBrewTypeChanged, onRatingChanged} = props;
-
-  // FIXME: fjern neste linje
-  const {onSaveBrew, navigation} = props;
-
   const onAddBrewClick = () => {
     const newBrew = {
       brewName,
@@ -31,55 +25,17 @@ export const NewBrew = props => {
       rating,
     };
 
-    // FIXME: fjern neste to linjer
-    props.onSaveBrew(newBrew);
-    props.navigation.goBack();
     // steg 2: kall props.onSaveBrew(newBrew);
     // steg 2: kall props.navigation.goBack(); for å gå tilbake til listevisning etter øl er lagt til
 
-    // FIXME: fjern kommentar neste linje
-    //alert("Du trykket lagre knappen for ølen med navn " + newBrew.brewName + "!");
+    alert("Du trykket lagre knappen for ølen med navn " + newBrew.brewName + "!");
   };
 
   return (
+    // Her kan man legge inn de forskjellige input-elementene som trengs for å legge til en ny brew
+    // Tips: Bruk komponentene TextInput, Slider og Picker fra /elements-mappen 
     <View>
-      <TextInput
-        label="Brew name"
-        value={brewName}
-        placeholder="e.g. Dahls Pils"
-        onTextChange={onBrewNameChanged}
-        required={true}
-        errorMessage="Required"/>
-      <TextInput
-        label="Brewery"
-        value={brewery}
-        placeholder="e.g. E.C Dahls Bryggeri"
-        onTextChange={onBreweryChanged}
-        required={true}
-        errorMessage="Required"/>
-      <Slider
-        label="ABV (%)"
-        value={alcohol}
-        onChange={onAlcoholChanged}
-        min={0}
-        max={96}
-        decimals={1}/>
-      <Picker
-        items={brewTypes}
-        label="Brew type"
-        selectedItem={brewType}
-        onSelect={onBrewTypeChanged}/>
-      <Slider
-        label="Rating (1-5)"
-        value={rating}
-        onChange={onRatingChanged}
-        min={1}
-        max={5}/>
 
-      <Button styles={{marginTop: 20}}
-              text='Add brew'
-              onClick={onAddBrewClick}
-              disabled={!validateNewBrew({brewName, brewery})}/>
     </View>
   );
 };
