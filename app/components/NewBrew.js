@@ -42,6 +42,8 @@ export const NewBrew = props => {
   };
 
   return (
+    // steg 1: Her kan man legge inn de forskjellige input-elementene som trengs for å legge til en ny brew
+    // Tips: Bruk komponentene TextInput, Slider og Picker fra /elements-mappen 
     <View>
       <TextInput
         label="Brew name"
