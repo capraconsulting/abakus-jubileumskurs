@@ -36,7 +36,7 @@ kan du titte i branchen med navn
 ![Skjerm for å legge inn ny øl](images/new_brew.PNG)
 
 Utvid filen `components/NewBrew.js`.
-Her skal dere lage et view som lar brukeren legge inn øl med navn, type, land, produsent og prosent.
+Her skal dere lage et view som lar brukeren legge inn øl med navn, type, produsent og prosent.
 Dere kan benytte ferdige komponenter som ligger i `elements`-mappen. Legg spesielt merke til
 `propTypes` som har verdi `isRequired`. Disse skal som minimum implementeres.
 
