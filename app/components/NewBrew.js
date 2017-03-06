@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react'
-import {Text, View, Image, TouchableOpacity} from 'react-native';
+import {Text, ScrollView, Image, TouchableOpacity} from 'react-native';
 import icons from '../constants/icons';
 
 import TextInput from '../elements/TextInput';
@@ -45,7 +45,7 @@ export const NewBrew = props => {
   return (
     // steg 1: Her kan man legge inn de forskjellige input-elementene som trengs for å legge til en ny brew
     // Tips: Bruk komponentene TextInput, Slider og Picker fra /elements-mappen
-    <View>
+    <ScrollView>
       <TextInput
         label="Brew name"
         value={brewName}
@@ -80,13 +80,14 @@ export const NewBrew = props => {
         max={5}/>
       <Button text='Take Picture'
               onClick={props.onPickImagePressed}
-              icon={icons.CAMERA}/>
-      <Image source={image.source}/>
+              icon={icons.CAMERA}
+              styles={{marginBottom: 20}}/>
+      <Image source={image.source} />
       <Button styles={{marginTop: 20}}
               text='Add brew'
               onClick={onAddBrewClick}
               disabled={!validateNewBrew({brewName, brewery})}/>
-    </View>
+    </ScrollView>
   );
 };
 
