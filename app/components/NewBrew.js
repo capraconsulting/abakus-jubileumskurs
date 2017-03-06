@@ -16,7 +16,7 @@ function validateNewBrew(brew) {
 
 export const NewBrew = props => {
 
-  const {brewName, brewery, alcohol, brewType, rating} = props;
+  const {brewName, brewery, alcohol, brewType, image, rating} = props;
   const {onBrewNameChanged, onBreweryChanged, onAlcoholChanged, onBrewTypeChanged, onRatingChanged} = props;
 
   // FIXME: fjern neste linje
@@ -29,7 +29,7 @@ export const NewBrew = props => {
       alcohol,
       brewType,
       rating,
-    } = props;
+    };
 
     // FIXME: fjern neste to linjer
     props.onSaveBrew(newBrew);
