@@ -27,6 +27,10 @@ For å starte applikasjonen:
 Nå kan du endre kode i `app`-mappen. Reload applikasjonen som nevnt over eller
 aktiver `Enable Live Reload` i menyen for at dette skjer automatisk ved endringer.
 
+Hvis du står fast og trenger hjelp, eller vil se hvordan vi har løst de forskjellige stegene,
+kan du titte i branchen med navn
+[final](https://github.com/capraconsulting/abakus-jubileumskurs/tree/final).
+
 ##  Steg 1: Legge inn en ny øl
 
 ![Skjerm for å legge inn ny øl](images/new_brew.PNG)
