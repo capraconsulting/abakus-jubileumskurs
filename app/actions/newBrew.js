@@ -1,3 +1,5 @@
+import { pickImage } from '../components/Camera';
+
 export const SET_ALCOHOL = 'SET_ALCOHOL';
 export const SET_BREW_NAME = 'SET_BREW_NAME';
 export const SET_BREW_TYPE = 'SET_BREW_TYPE';
@@ -39,3 +41,9 @@ export const setRating = rating => ({
 export const resetForm = () => ({
   type: RESET_FORM
 });
+
+export const openImagePicker = () => (dispatch) => {
+    return pickImage()
+        .then(image => dispatch(setImage(image)))
+        .catch((error) => console.error(error));
+};

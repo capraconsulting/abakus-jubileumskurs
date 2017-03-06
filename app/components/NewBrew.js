@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react'
-import {Text, View} from 'react-native';
+import {Text, ScrollView, View, Image, TouchableOpacity} from 'react-native';
+import icons from '../constants/icons';
 
 import TextInput from '../elements/TextInput';
 import Button from '../elements/Button';
@@ -16,7 +17,7 @@ function validateNewBrew(brew) {
 
 export const NewBrew = props => {
 
-  const {brewName, brewery, alcohol, brewType, rating} = props;
+  const {brewName, brewery, alcohol, brewType, image, rating} = props;
   const {onBrewNameChanged, onBreweryChanged, onAlcoholChanged, onBrewTypeChanged, onRatingChanged} = props;
 
   // FIXME: fjern neste linje
@@ -29,7 +30,7 @@ export const NewBrew = props => {
       alcohol,
       brewType,
       rating,
-    }; // } = props;
+    };
 
     // FIXME: fjern neste to linjer
     props.onSaveBrew(newBrew);
@@ -44,7 +45,7 @@ export const NewBrew = props => {
   return (
     // steg 1: Her kan man legge inn de forskjellige input-elementene som trengs for å legge til en ny brew
     // Tips: Bruk komponentene TextInput, Slider og Picker fra /elements-mappen
-    <View>
+    <ScrollView>
       <TextInput
         label="Brew name"
         value={brewName}
@@ -77,12 +78,16 @@ export const NewBrew = props => {
         onChange={onRatingChanged}
         min={1}
         max={5}/>
-
-      <Button styles={{marginTop: 20}}
-              text='Add brew'
+      <Button text='Take Picture'
+              onClick={props.onPickImagePressed}
+              icon={icons.CAMERA}/>
+      <View style={{marginTop: 20}}>
+        <Image source={image.source} />
+      </View>
+      <Button text='Add brew'
               onClick={onAddBrewClick}
               disabled={!validateNewBrew({brewName, brewery})}/>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -101,7 +106,8 @@ NewBrew.propTypes = {
   onRatingChanged: PropTypes.func.isRequired,
   onNavigateBack: PropTypes.func.isRequired,
   onSaveBrew: PropTypes.func.isRequired,
-  navigation: PropTypes.any
+  navigation: PropTypes.any,
+  onPickImagePressed: React.PropTypes.func.isRequired
 };
 
 export default NewBrew;

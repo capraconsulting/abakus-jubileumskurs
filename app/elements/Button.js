@@ -8,7 +8,7 @@ const Button = ({text, large, icon, backgroundColor, onClick, disabled}) => (
   <ElementsButton onPress={onClick}
                   raised
                   large={large}
-                  icon={icons.BEER}
+                  icon={icon || icons.BEER}
                   backgroundColor={backgroundColor}
                   title={text}
                   disabled={disabled}/>
