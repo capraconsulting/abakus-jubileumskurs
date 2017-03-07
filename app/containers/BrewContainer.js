@@ -7,6 +7,7 @@ import Brew from '../components/Brew';
 const BrewContainer = props => <Brew {...props} />;
 
 BrewContainer.navigationOptions = {
+  //Steg 3: Hent ut tittel fra state.params
   title: ({state}) => state.params.brewName
 };
 

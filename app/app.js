@@ -22,7 +22,7 @@ export const AppNavigator = StackNavigator({
   brew: { screen: BrewContainer },
 }, {
   // FIXME: endre til newList for steg 1
-  initialRouteName: 'brewList', // steg 2: vis brewList som standard
+  initialRouteName: 'brewList', // Steg 2: vis brewList som standard
 });
 
 class App extends Component {

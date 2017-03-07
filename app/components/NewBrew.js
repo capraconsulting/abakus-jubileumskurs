@@ -20,9 +20,6 @@ export const NewBrew = props => {
   const {brewName, brewery, alcohol, brewType, image, rating} = props;
   const {onBrewNameChanged, onBreweryChanged, onAlcoholChanged, onBrewTypeChanged, onRatingChanged} = props;
 
-  // FIXME: fjern neste linje
-  const {onSaveBrew, navigation} = props;
-
   const onAddBrewClick = () => {
     const newBrew = {
       brewName,
@@ -35,16 +32,16 @@ export const NewBrew = props => {
     // FIXME: fjern neste to linjer
     props.onSaveBrew(newBrew);
     props.navigation.goBack();
-    // steg 2: kall props.onSaveBrew(newBrew);
-    // steg 2: kall props.navigation.goBack(); for å gå tilbake til listevisning etter øl er lagt til
+    // Steg 2: kall props.onSaveBrew(newBrew);
+    // Steg 2: kall props.navigation.goBack(); for å gå tilbake til listevisning etter øl er lagt til
 
     // FIXME: fjern kommentar neste linje
     //alert("Du trykket lagre knappen for ølen med navn " + newBrew.brewName + "!");
   };
 
   return (
-    // steg 1: Her kan man legge inn de forskjellige input-elementene som trengs for å legge til en ny brew
-    // Tips: Bruk komponentene TextInput, Slider og Picker fra /elements-mappen
+    // Steg 1: Her kan man legge inn de forskjellige input-elementene som trengs for å legge til en ny brew
+    // Tips: Bruk komponentene TextInput, Slider og Picker fra / elements-mappen
     <ScrollView>
       <TextInput
         label="Brew name"

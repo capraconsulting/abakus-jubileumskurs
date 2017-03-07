@@ -1,13 +1,14 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native';
 
-import Button from '../elements/Button';
-import Card from '../elements/Card';
 import List from '../elements/List';
-import Icon from '../elements/Icon';
-import Image from '../elements/Image';
 
 export const BrewList = ({brewList, navigateToNewForm, navigateToBrew}) => (
+  // Step 2: List ut alle brews i brewList. Bruk List-elementet fra elements/List.js
+  //
+  // Step 3: Legg til en onPress funksjon som får inn brew og index som parametere (brew, index)
+  // og som kaller navigateToBrew() med brewName og index som parametere.
+
   <View style={styles.container}>
     <List
       items={brewList}

@@ -10,15 +10,15 @@ En bruker skal kunne legge inn nye øl, samt se en oversikt over øl som er lagt
   nødvendig å starte simulator manuelt på iOS.)
 
 Sett opp grunleggende avhengigheter:
-
+- Naviger til prosjekt mappen
 - Installer Yarn som vi bruker i stedet for npm:
   `npm install -g yarn` (bruk `sudo` hvis du får tilgangsfeil.)
 - Installer avhengigheter:
-  `yarn`
+  Kall `yarn` fra kommandolinjen i prosjekt mappen
 
 For å starte applikasjonen:
 
-- Start app i emulator: `react-native run-android` eller `react-native run-ios`
+- Start app i emulator: `react-native run-android` (på Windows må en android emulator allerede være startet) eller `react-native run-ios`
 - I noen tilfeller må man også kjøre `react-native start` som bygger tilgjengeliggjør
   JavaScript-applikasjonen
 - Hvis du får feilmelding åpne meny i appen ved å trykke `Ctrl+M` (evt. dobbeltrykk `R`)
@@ -36,7 +36,7 @@ kan du titte i branchen med navn
 ![Skjerm for å legge inn ny øl](images/new_brew.PNG)
 
 Utvid filen `components/NewBrew.js`.
-Her skal dere lage et view som lar brukeren legge inn øl med navn, type, produsent og prosent.
+Her skal dere lage et view som lar brukeren legge inn øl med navn, produsent, prosent, type, og rating.
 Dere kan benytte ferdige komponenter som ligger i `elements`-mappen. Legg spesielt merke til
 `propTypes` som har verdi `isRequired`. Disse skal som minimum implementeres.
 
