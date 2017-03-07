@@ -13,7 +13,7 @@ export const BrewList = ({brewList, navigateToNewForm, navigateToBrew}) => (
     <List
       items={brewList}
       titleKey='brewName'
-      onPress={(brew, index) => navigateToBrew(brew.brewName, index)}
+      onPress={() => {}}
     />
   </View>
 );

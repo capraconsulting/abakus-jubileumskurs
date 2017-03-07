@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react'
 import {Text, ScrollView, View, Image, TouchableOpacity} from 'react-native';
-import icons from '../constants/icons';
 
 import TextInput from '../elements/TextInput';
 import Button from '../elements/Button';
@@ -17,7 +16,7 @@ function validateNewBrew(brew) {
 
 export const NewBrew = props => {
 
-  const {brewName, brewery, alcohol, brewType, image, rating} = props;
+  const {brewName, brewery, alcohol, brewType, rating} = props;
   const {onBrewNameChanged, onBreweryChanged, onAlcoholChanged, onBrewTypeChanged, onRatingChanged} = props;
 
   const onAddBrewClick = () => {
@@ -77,12 +76,6 @@ export const NewBrew = props => {
         min={1}
         max={5}
         step={1}/>
-      <Button text='Take Picture'
-              onClick={props.onPickImagePressed}
-              icon={icons.CAMERA}/>
-      <View style={{marginTop: 20}}>
-        <Image source={image.source} />
-      </View>
       <Button text='Add brew'
               onClick={onAddBrewClick}
               disabled={!validateNewBrew({brewName, brewery})}/>

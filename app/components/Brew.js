@@ -24,19 +24,7 @@ export const Brew = ({brew}) => (
   // alcohol og rating. Du kan bruke hjelpe-funksjonen renderRating(rating) for å representere rating som stjerner
   // PS: Wrap renderRating med et View stylet med flex for å få stjernene til å vises i en rad.
   <View>
-    <Card>
-      <Text>Brewery: {brew.brewery}</Text>
-      <Text>Brew type: {brew.brewType}</Text>
-      <Text>Alcohol: {brew.alcohol.toFixed(1)}%</Text>
-      <View style={{
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginTop: 10
-      }}>
-        {renderRating(brew.rating)}
-      </View>
-    </Card>
+
   </View>
 );
 
