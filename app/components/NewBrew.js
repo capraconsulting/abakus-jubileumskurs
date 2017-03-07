@@ -66,7 +66,8 @@ export const NewBrew = props => {
         onChange={onAlcoholChanged}
         min={0}
         max={96}
-        decimals={1}/>
+        decimals={1}
+        step={0.1}/>
       <Picker
         items={brewTypes}
         label="Brew type"
@@ -77,7 +78,8 @@ export const NewBrew = props => {
         value={rating}
         onChange={onRatingChanged}
         min={1}
-        max={5}/>
+        max={5}
+        step={1}/>
       <Button text='Take Picture'
               onClick={props.onPickImagePressed}
               icon={icons.CAMERA}/>
