@@ -8,7 +8,7 @@ import {BrewType} from "../constants/brewTypes";
 
 function renderRating(rating) {
   return [1, 2, 3, 4, 5].map((i, index) => {
-    const icon = i <= Math.ceil(rating) ? icons.STAR : icons.STAR_O;
+    const icon = i <= rating ? icons.STAR : icons.STAR_O;
     icon.color = 'yellow';
     return (
       <View style={{width: 50, height: 50}} key={index}>
