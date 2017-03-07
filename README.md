@@ -6,29 +6,38 @@ En bruker skal kunne legge inn nye øl, samt se en oversikt over øl som er lagt
 ##  Setup
 
 - Følg oppskriften på https://facebook.github.io/react-native/docs/getting-started.html
-- For Android: Sørg for at du har startet en emulator før du fortsetter. (Ikke
-  nødvendig å starte simulator manuelt på iOS.)
+- **For Android:** Sørg for at du har startet en emulator før du fortsetter.
 
 Sett opp grunleggende avhengigheter:
+- Start terminalen
 - Naviger til prosjekt mappen
-- Installer Yarn som vi bruker i stedet for npm:
-  `npm install -g yarn` (bruk `sudo` hvis du får tilgangsfeil.)
-- Installer avhengigheter:
-  Kall `yarn` fra kommandolinjen i prosjekt mappen
+- Installer Yarn som vi bruker i stedet for npm med kommandoen:  
+  `npm install -g yarn` (bruk `sudo` hvis du får tilgangsfeil)
+- Installer avhengigheter:  
+Kall `yarn` fra kommandolinjen i prosjekt mappen
 
 For å starte applikasjonen:
 
-- Start app i emulator: `react-native run-android` (på Windows må en android emulator allerede være startet) eller `react-native run-ios`
-- I noen tilfeller må man også kjøre `react-native start` som bygger tilgjengeliggjør
-  JavaScript-applikasjonen
-- Hvis du får feilmelding åpne meny i appen ved å trykke `Ctrl+M` (evt. dobbeltrykk `R`)
-  (Windows/Linux) eller `Cmd+D` (Mac) og trykk `Reload`
+#### Mac
+- Start app i emulator med kommandoen  
+`react-native run-ios`
+- Hvis du får feilmelding, åpne meny i appen ved å trykke `Cmd+D` og trykk `Reload`.
 
-Nå kan du endre kode i `app`-mappen. Reload applikasjonen som nevnt over eller
-aktiver `Enable Hot Reloading` i menyen for at dette skjer automatisk ved endringer.
+#### Linux
 
-Hvis du står fast og trenger hjelp, eller vil se hvordan vi har løst de forskjellige stegene,
-kan du titte i branchen med navn
+- Start app i emulator: `react-native run-android`
+- I noen tilfeller må man også kjøre `react-native start` som bygger JavaScript-applikasjonen
+- Hvis du får feilmelding åpne meny i appen ved å trykke `Ctrl+M` (evt. dobbeltrykk `R`) og trykk `Reload`
+
+#### Windows
+
+- Start app i emulator: `react-native run-android` (android emulator må allerede være startet)
+- I noen tilfeller må man også kjøre `react-native start` som bygger JavaScript-applikasjonen
+- Hvis du får feilmelding åpne meny i appen ved å trykke `Ctrl+M` (evt. dobbeltrykk `R`) og trykk `Reload`
+
+Nå kan du endre kode i `app`-mappen. Reload applikasjonen som nevnt over eller aktiver `Enable Hot Reloading` i menyen for at dette skjer automatisk ved endringer.
+
+Hvis du står fast og trenger hjelp, eller vil se hvordan vi har løst de forskjellige stegene, kan du titte i branchen med navn
 [final](https://github.com/capraconsulting/abakus-jubileumskurs/tree/final).
 
 ##  Steg 1: Legge inn en ny øl
