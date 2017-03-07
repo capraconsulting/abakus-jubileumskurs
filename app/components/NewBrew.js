@@ -31,7 +31,7 @@ export const NewBrew = props => {
     // Steg 2: kall props.onSaveBrew(newBrew);
     // Steg 2: kall props.navigation.goBack(); for å gå tilbake til listevisning etter øl er lagt til
 
-    alert("Du trykket lagre knappen for ølen med navn " + newBrew.brewName + "!");
+    alert(`${newBrew.brewName} saved!`);
   };
 
   return (
