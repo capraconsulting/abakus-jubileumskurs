@@ -8,7 +8,7 @@ const BrewContainer = props => <Brew {...props} />;
 
 BrewContainer.navigationOptions = {
   //Steg 3: Hent ut tittel fra state.params
-  title: ({state}) => state.params.brewName
+  title: () => {}
 };
 
 const mapStateToProps = (state, ownProps) => ({
