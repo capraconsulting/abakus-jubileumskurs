@@ -10,11 +10,7 @@ export const BrewList = ({brewList, navigateToNewForm, navigateToBrew}) => (
   // og som kaller navigateToBrew() med brewName og index som parametere.
 
   <View style={styles.container}>
-    <List
-      items={brewList}
-      titleKey='brewName'
-      onPress={() => {}}
-    />
+
   </View>
 );
 

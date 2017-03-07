@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import React, {Component} from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+import {StackNavigator} from 'react-navigation';
 
 import BrewListContainer from './containers/BrewListContainer';
 import BrewContainer from './containers/BrewContainer';
@@ -17,13 +17,14 @@ import NavigationContainer from './containers/NavigatorContainer';
  * TODO: should probably be in a seperate file
  */
 export const AppNavigator = StackNavigator({
-  brewList: { screen: BrewListContainer },
-  newBrew: { screen: NewBrewContainer },
-  brew: { screen: BrewContainer },
-}, {
-  // FIXME: endre til newList for steg 1
-  initialRouteName: 'brewList', // Steg 2: vis brewList som standard
-});
+    brewList: {screen: BrewListContainer},
+    newBrew: {screen: NewBrewContainer},
+    brew: {screen: BrewContainer},
+  },
+  {
+    initialRouteName: 'newBrew', // Steg 2: Vis brewList som standard
+  }
+);
 
 class App extends Component {
 

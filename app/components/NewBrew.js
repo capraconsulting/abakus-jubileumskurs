@@ -25,17 +25,13 @@ export const NewBrew = props => {
       brewery,
       alcohol,
       brewType,
-      rating,
+      rating
     };
 
-    // FIXME: fjern neste to linjer
-    props.onSaveBrew(newBrew);
-    props.navigation.goBack();
     // Steg 2: kall props.onSaveBrew(newBrew);
     // Steg 2: kall props.navigation.goBack(); for å gå tilbake til listevisning etter øl er lagt til
 
-    // FIXME: fjern kommentar neste linje
-    //alert("Du trykket lagre knappen for ølen med navn " + newBrew.brewName + "!");
+    alert("Du trykket lagre knappen for ølen med navn " + newBrew.brewName + "!");
   };
 
   return (
