@@ -36,45 +36,8 @@ export const NewBrew = props => {
 
   return (
     // Steg 1: Her kan man legge inn de forskjellige input-elementene som trengs for å legge til en ny brew
-    // Tips: Bruk komponentene TextInput, Slider og Picker fra / elements-mappen
+    // Tips: Bruk komponentene TextInput, Slider, Picker og Button fra / elements-mappen
     <ScrollView>
-      <TextInput
-        label="Brew name"
-        value={brewName}
-        placeholder="e.g. Dahls Pils"
-        onTextChange={onBrewNameChanged}
-        required={true}
-        errorMessage="Required"/>
-      <TextInput
-        label="Brewery"
-        value={brewery}
-        placeholder="e.g. E.C Dahls Bryggeri"
-        onTextChange={onBreweryChanged}
-        required={true}
-        errorMessage="Required"/>
-      <Slider
-        label="ABV (%)"
-        value={alcohol}
-        onChange={onAlcoholChanged}
-        min={0}
-        max={96}
-        decimals={1}
-        step={0.1}/>
-      <Picker
-        items={brewTypes}
-        label="Brew type"
-        selectedItem={brewType}
-        onSelect={onBrewTypeChanged}/>
-      <Slider
-        label="Rating (1-5)"
-        value={rating}
-        onChange={onRatingChanged}
-        min={1}
-        max={5}
-        step={1}/>
-      <Button text='Add brew'
-              onClick={onAddBrewClick}
-              disabled={!validateNewBrew({brewName, brewery})}/>
     </ScrollView>
   );
 };
