@@ -1,26 +1,6 @@
-import {
-  ADD_BREW,
-  REMOVE_BREW
-} from '../actions/brewList';
+import { ADD_BREW } from '../actions/brewList';
 
-const initialState = [
-  {
-    brewName: 'Fatøl',
-    brewery: 'Hansa',
-    alcohol: 4.7,
-    brewType: 'Other',
-    rating: 4,
-    image: 'https://pbs.twimg.com/media/CzW9RBZXUAAK43q.jpg'
-  },
-  {
-    brewName: 'Pilsner',
-    brewery: 'Ringnes',
-    alcohol: 4.7,
-    brewType: 'Other',
-    rating: 2,
-    image: 'https://pbs.twimg.com/media/CzW9RBZXUAAK43q.jpg'
-  }
-];
+const initialState = [];
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
@@ -28,12 +8,6 @@ export default function reducer(state = initialState, action) {
       return [
         ...state,
         action.brew
-      ];
-    case REMOVE_BREW:
-      return [
-        ...state.brews.filter(brew => {
-          return brew.brewName !== action.brewName;
-        })
       ];
     default:
       return state;
