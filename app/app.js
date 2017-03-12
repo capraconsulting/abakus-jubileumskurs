@@ -25,7 +25,7 @@ export const AppNavigator = StackNavigator({
   brew: { screen: BrewContainer },
 }, {
   // FIXME: endre til newList for steg 1
-  initialRouteName: 'brewList', // Steg 2: vis brewList som standard
+  initialRouteName: 'brewList', // Steg 2: her bestemmes hvilket skjermbilde som skal vises når appen starter
 });
 
 class App extends Component {
