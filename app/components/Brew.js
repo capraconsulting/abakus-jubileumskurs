@@ -4,7 +4,6 @@ import {Text, View} from 'react-native';
 import Card from '../elements/Card';
 import Icon from '../elements/Icon';
 import icons from '../constants/icons';
-import {BrewType} from "../constants/brewTypes";
 
 function renderRating(rating) {
   return [1, 2, 3, 4, 5].map((i, index) => {
