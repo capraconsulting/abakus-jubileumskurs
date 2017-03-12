@@ -22,7 +22,7 @@ BrewListContainer.navigationOptions = {
 };
 
 const mapStateToProps = state => ({
-  brewList: state.brewList
+  brewList: state.brewList.map(brew => brew.data)
 });
 
 const mapDispatchToProps = dispatch => ({

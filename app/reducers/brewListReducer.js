@@ -1,6 +1,6 @@
-import { ADD_BREW, REMOVE_BREW } from '../actions/brewList';
+import { ADD_BREW, REMOVE_BREW, UPDATE_BREW } from '../actions/brewList';
 
-// Initial state is loaded from Firebase on mount
+// Initial state is loaded from Firebase on App mount
 const initialState = [];
 
 export default function reducer(state = initialState, action) {
@@ -8,11 +8,25 @@ export default function reducer(state = initialState, action) {
     case ADD_BREW:
       return [
         ...state,
-        action.brew
+        {
+          key: action.payload.key,
+          data: action.payload.brew,
+        },
       ];
     case REMOVE_BREW:
-      return state.brews.filter(brew => {
-        return brew.brewName !== action.brewName;
+      return state.filter(brew => {
+        return brew.key !== action.payload.key;
+      });
+    case UPDATE_BREW:
+      return state.map(brew => {
+        if (brew.key === action.payload.key) {
+          return {
+            key: action.payload.key,
+            data: action.payload.brew,
+          };
+        } else {
+          return brew;
+        }
       });
     default:
       return state;

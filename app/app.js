@@ -8,7 +8,7 @@ import BrewContainer from './containers/BrewContainer';
 import NewBrewContainer from './containers/NewBrewContainer';
 import NavigationContainer from './containers/NavigatorContainer';
 import fb from './firebase';
-import { addBrew, removeBrew } from './actions/brewList';
+import { firebaseBrewAdded, firebaseBrewRemoved, firebaseBrewUpdated } from './actions/brewList';
 
 /**
  * We are using React Navigation to handle navigation in the app
@@ -31,8 +31,9 @@ export const AppNavigator = StackNavigator({
 class App extends Component {
 
   componentDidMount() {
-    fb.ref('/').on('child_added', obj => this.props.addBrew(obj.val()));
-    fb.ref('/').on('child_removed', obj => this.props.removeBrew(obj.val()));
+    fb.ref('/').on('child_added', obj => this.props.firebaseBrewAdded(obj.key, obj.val()));
+    fb.ref('/').on('child_changed', obj => this.props.firebaseBrewUpdated(obj.key, obj.val()));
+    fb.ref('/').on('child_removed', obj => this.props.firebaseBrewRemoved(obj.key, obj.val()));
   }
 
   render() {
@@ -54,9 +55,10 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => ({
 });
 
-const mapDispatchToProps = dispatch => ({
-  addBrew: brew => dispatch(addBrew(brew)),
-  removeBrew: brew => dispatch(removeBrew(brew)),
-});
+const mapDispatchToProps = {
+  firebaseBrewAdded,
+  firebaseBrewUpdated,
+  firebaseBrewRemoved,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
