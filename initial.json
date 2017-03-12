@@ -1,0 +1,18 @@
+{
+  "-KUDHLoA79LzYXsXLNZM": {
+    "alcohol": 4.7,
+    "brewName": "Fatøl",
+    "brewType": "Lager",
+    "brewery": "Hansa",
+    "image": "https://res.cloudinary.com/norgesgruppen/image/upload/c_pad,b_white,f_auto,h_584,q_50,w_584/v1486042229/Product/7030012300501.jpg",
+    "rating": 4
+  },
+  "-KUDHPgsYqOVcC-Db7-W": {
+    "alcohol": 4.7,
+    "brewName": "Pils",
+    "brewType": "Lager",
+    "brewery": "Dahls",
+    "image": "",
+    "rating": 3
+  }
+}

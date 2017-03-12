@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { StyleSheet, Text, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
@@ -6,6 +7,8 @@ import BrewListContainer from './containers/BrewListContainer';
 import BrewContainer from './containers/BrewContainer';
 import NewBrewContainer from './containers/NewBrewContainer';
 import NavigationContainer from './containers/NavigatorContainer';
+import fb from './firebase';
+import { addBrew } from './actions/brewList';
 
 /**
  * We are using React Navigation to handle navigation in the app
@@ -27,6 +30,12 @@ export const AppNavigator = StackNavigator({
 
 class App extends Component {
 
+  componentDidMount() {
+    fb.ref('/').on('child_added', obj => {
+      this.props.addBrew(obj.val());
+    });
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -43,4 +52,11 @@ const styles = StyleSheet.create({
   }
 });
 
-export default App;
+const mapStateToProps = state => ({
+});
+
+const mapDispatchToProps = dispatch => ({
+  addBrew: (brew) => dispatch(addBrew(brew))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
