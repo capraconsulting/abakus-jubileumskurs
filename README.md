@@ -10,11 +10,11 @@ En bruker skal kunne legge inn nye øl, samt se en oversikt over øl som er lagt
 
 Sett opp grunleggende avhengigheter:
 - Start terminalen
-- Naviger til prosjekt mappen
-- Installer Yarn som vi bruker i stedet for npm med kommandoen:  
+- Naviger til prosjektmappen
+- Installer Yarn (vi bruker det i stedet for npm) med kommandoen:  
   `npm install -g yarn` (bruk `sudo` hvis du får tilgangsfeil)
 - Installer avhengigheter:  
-Kall `yarn` fra kommandolinjen i prosjekt mappen
+Kall `yarn` fra kommandolinjen i prosjektmappen
 
 For å starte applikasjonen:
 
