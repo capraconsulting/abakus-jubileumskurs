@@ -22,14 +22,18 @@ BrewListContainer.navigationOptions = {
 };
 
 const mapStateToProps = state => ({
-  brewList: state.brewList.map(brew => brew.data)
+  brewList: state.brewList.map(brew => ({
+    // Transform state so we merge key and data of brew items
+    ...brew.data,
+    key: brew.key,
+  }))
 });
 
 const mapDispatchToProps = dispatch => ({
   navigateToNewForm: () => dispatch(NavigationActions.navigate({routeName: 'newBrew'})),
-  navigateToBrew: (brewName, index) => dispatch(NavigationActions.navigate({
+  navigateToBrew: (brewName, key) => dispatch(NavigationActions.navigate({
     routeName: 'brew',
-    params: {brewName, index}
+    params: {brewName, key}
   }))
 });
 

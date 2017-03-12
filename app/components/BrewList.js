@@ -1,34 +1,31 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native';
 
+import { brewPropType } from './Brew';
 import List from '../elements/List';
 
 export const BrewList = ({brewList, navigateToNewForm, navigateToBrew}) => (
   // Step 2: List ut alle brews i brewList. Bruk List-elementet fra elements/List.js
   //
-  // Step 3: Legg til en onPress funksjon som får inn brew og index som parametere (brew, index)
-  // og som kaller navigateToBrew() med brewName og index som parametere.
+  // Step 3: Legg til en onPress funksjon som får inn brew som parameter
+  // og som kaller navigateToBrew() med brew.brewName og brew.key som parametere.
 
   <View style={styles.container}>
     <List
       items={brewList}
       titleKey='brewName'
-      onPress={(brew, index) => navigateToBrew(brew.brewName, index)}
+      onPress={brew => navigateToBrew(brew.brewName, brew.key)}
     />
   </View>
 );
 
-const brewPropTypes = React.PropTypes.shape({
-  brewName: React.PropTypes.string.isRequired,
-  brewery: React.PropTypes.string.isRequired,
-  alcohol: React.PropTypes.number.isRequired,
-  brewType: React.PropTypes.string.isRequired, // e.g. OTHER
-  rating: React.PropTypes.number.isRequired,
-  image: React.PropTypes.string,
-});
-
 BrewList.propTypes = {
-  brewList: React.PropTypes.arrayOf(brewPropTypes).isRequired,
+  // Se `brewPropType` i `Brew.js` for hvordan elementene i brewList ser ut
+  brewList: React.PropTypes.arrayOf(
+    React.PropTypes.shape(
+      brewPropType
+    )
+  ).isRequired,
   navigateToNewForm: React.PropTypes.func.isRequired,
   navigateToBrew: React.PropTypes.func.isRequired,
 };

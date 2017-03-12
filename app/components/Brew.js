@@ -40,15 +40,18 @@ export const Brew = ({brew}) => (
   </View>
 );
 
+export const brewPropType = {
+  key: PropTypes.string, // ID in Firebase datastore
+  alcohol: PropTypes.number,
+  brewery: PropTypes.string,
+  brewName: PropTypes.string,
+  brewType: PropTypes.string,
+  image: PropTypes.string,
+  rating: PropTypes.number,
+};
+
 Brew.propTypes = {
-  brew: PropTypes.shape({
-    alcohol: PropTypes.number,
-    brewery: PropTypes.string,
-    brewName: PropTypes.string,
-    brewType: PropTypes.string,
-    image: PropTypes.string,
-    rating: PropTypes.number
-  })
+  brew: PropTypes.shape(brewPropType),
 };
 
 export default Brew;
