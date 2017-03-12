@@ -6,6 +6,7 @@ En bruker skal kunne legge inn nye øl, samt se en oversikt over øl som er lagt
 ##  Setup
 
 - Følg oppskriften på https://facebook.github.io/react-native/docs/getting-started.html
+- **For iOS på Mac:** Husk at du trenger Xcode. Det bør lastes ned på forhånd. Du finner det [her](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
 - **For Android:** Sørg for at du har startet en emulator før du fortsetter.
 
 Sett opp grunleggende avhengigheter:
