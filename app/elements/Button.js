@@ -4,8 +4,8 @@ import { Button as ElementsButton } from 'react-native-elements';
 import colors from '../constants/colors';
 import icons from '../constants/icons';
 
-const Button = ({text, large, icon, backgroundColor, onClick, disabled}) => (
-  <ElementsButton onPress={onClick}
+const Button = ({text, large, icon, backgroundColor, onPress, disabled}) => (
+  <ElementsButton onPress={onPress}
                   raised
                   large={large}
                   icon={icon || icons.BEER}
@@ -22,7 +22,7 @@ Button.propTypes = {
     type: PropTypes.string
   }),
   backgroundColor: PropTypes.string,
-  onClick: PropTypes.func,
+  onPress: PropTypes.func,
   disabled: PropTypes.bool
 };
 

@@ -78,13 +78,13 @@ export const NewBrew = props => {
         max={5}
         step={1}/>
       <Button text='Take Picture'
-              onClick={props.onPickImagePressed}
+              onPress={props.onPickImagePressed}
               icon={icons.CAMERA}/>
       <View style={{marginTop: 20}}>
         <Image source={image.source} />
       </View>
       <Button text='Add brew'
-              onClick={onAddBrewClick}
+              onPress={onAddBrewClick}
               disabled={!validateNewBrew({brewName, brewery})}/>
     </ScrollView>
   );
