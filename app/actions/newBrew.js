@@ -1,12 +1,12 @@
 import { pickImage } from '../components/Camera';
 
-export const SET_ALCOHOL = 'SET_ALCOHOL';
-export const SET_BREW_NAME = 'SET_BREW_NAME';
-export const SET_BREW_TYPE = 'SET_BREW_TYPE';
-export const SET_BREWERY = 'SET_BREWERY';
-export const SET_IMAGE = 'SET_IMAGE';
-export const SET_RATING = 'SET_RATING';
-export const RESET_FORM =  'RESET_FORM';
+export const SET_ALCOHOL = 'newBrew/SET_ALCOHOL';
+export const SET_BREW_NAME = 'newBrew/SET_BREW_NAME';
+export const SET_BREW_TYPE = 'newBrew/SET_BREW_TYPE';
+export const SET_BREWERY = 'newBrew/SET_BREWERY';
+export const SET_IMAGE = 'newBrew/SET_IMAGE';
+export const SET_RATING = 'newBrew/SET_RATING';
+export const RESET_FORM =  'newBrew/RESET_FORM';
 
 export const setAlcohol = alcohol => ({
   type: SET_ALCOHOL,
