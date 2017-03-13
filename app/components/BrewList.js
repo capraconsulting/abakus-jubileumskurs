@@ -13,7 +13,7 @@ export const BrewList = ({brewList, navigateToNewForm, navigateToBrew}) => (
   <View style={styles.container}>
     <List
       items={brewList}
-      titleKey='brewName'
+      title={brew => `${brew.brewery}: ${brew.brewName}`}
       onPress={brew => navigateToBrew(brew.brewName, brew.key)}
     />
   </View>
