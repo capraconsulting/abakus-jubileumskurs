@@ -42,7 +42,7 @@ For å starte applikasjonen:
 Nå kan du endre kode i `app`-mappen. Reload applikasjonen som nevnt over eller aktiver `Enable Hot Reloading`
 i menyen for at dette skjer automatisk ved endringer.
 
-## Oversikt over oppgaver
+## Oppgaver på kurset
 
 Oppgavene er delt inn i egne steg nedenfor.
 
