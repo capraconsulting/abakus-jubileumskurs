@@ -81,9 +81,7 @@ export const NewBrew = props => {
         label="Image url"
         value={image}
         placeholder="http://example.com/image.jpg"
-        onTextChange={onImageChanged}
-        required={true}
-        errorMessage="Required"/>
+        onTextChange={onImageChanged}/>
 
       <View style={{marginTop: 20}}>
         <Image source={image.source} />

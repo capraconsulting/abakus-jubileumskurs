@@ -16,7 +16,7 @@ import {Card as ElementsCard} from 'react-native-elements';
 const Card = ({image, children}) => (
   <ElementsCard
     wrapperStyle={styles.card}
-    image={{uri: image}}
+    image={ image ? { uri: image } : null}
     imageStyle={styles.image}
   >
     {children}
