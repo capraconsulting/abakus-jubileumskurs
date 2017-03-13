@@ -27,7 +27,7 @@ export const Brew = ({brew}) => (
     <Card>
       <Text>Brewery: {brew.brewery}</Text>
       <Text>Brew type: {brew.brewType}</Text>
-      <Text>Alcohol: {brew.alcohol.toFixed(1)}%</Text>
+      <Text>Alcohol: {brew.alcohol.toFixed(1)} %</Text>
       <View style={{
         flex: 1,
         flexDirection: 'row',
