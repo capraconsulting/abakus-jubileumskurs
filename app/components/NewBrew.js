@@ -45,45 +45,7 @@ export const NewBrew = props => {
         onTextChange={onBrewNameChanged}
         required={true}
         errorMessage="Required"/>
-      <TextInput
-        label="Brewery"
-        value={brewery}
-        placeholder="E.g. E.C Dahls Bryggeri"
-        onTextChange={onBreweryChanged}
-        required={true}
-        errorMessage="Required"/>
-      <Slider
-        label="ABV (%)"
-        value={alcohol}
-        onChange={onAlcoholChanged}
-        min={0}
-        max={96}
-        decimals={1}
-        step={0.1}/>
-      <Picker
-        items={brewTypes}
-        label="Brew type"
-        selectedItem={brewType}
-        onSelect={onBrewTypeChanged}/>
-      <Slider
-        label="Rating (1-5)"
-        value={rating}
-        onChange={onRatingChanged}
-        min={1}
-        max={5}
-        step={1}/>
-      <TextInput
-        label="Image url"
-        value={image}
-        placeholder="http://example.com/image.jpg"
-        onTextChange={onImageChanged}/>
-
-      <View style={{marginTop: 20}}>
-        <Image source={image.source} />
-      </View>
-      <Button text='Add brew'
-              onPress={onAddBrewClick}
-              disabled={!validateNewBrew({brewName, brewery})}/>
+      <Text>Her kan du legge inn flere felter og elementer for å bygge opp skjemaet</Text>
     </ScrollView>
   );
 };
