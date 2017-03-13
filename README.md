@@ -1,6 +1,6 @@
 # Velkommen til jubileumskurs
 
-Vi skal lage en applikasjonen som holder styr på enkeltinvidets ølsamling, ala [untapped](https://untappd.com/).
+Vi skal lage en applikasjonen som holder styr på en liten ølsamling, ala [untapped](https://untappd.com/).
 En bruker skal kunne se listen over øl, detaljer om en øl samt legge inn nye øl.
 
 Oppgaven tar utgangspunkt i en kodebase vi har skrevet, og din jobb er å utvide denne.
@@ -11,7 +11,7 @@ Oppgaven tar utgangspunkt i en kodebase vi har skrevet, og din jobb er å utvide
 - **For iOS på Mac:** Husk at du trenger Xcode. Det bør lastes ned på forhånd. Du finner det [her](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
 - **For Android:** Sørg for at du har startet en emulator før du fortsetter.
 
-Sett opp grunleggende avhengigheter:
+Sett opp grunnleggende avhengigheter:
 
 - Start terminalen
 - Naviger til prosjektmappen
@@ -27,22 +27,17 @@ For å starte applikasjonen:
   `react-native run-ios`
 - Hvis du får feilmelding, åpne meny i appen ved å trykke `Cmd+D` og trykk `Reload`.
 
-#### Linux
+#### Windows og Linux
 
-- Start app i emulator: `react-native run-android`
+- Start app i emulator:  
+ `react-native run-android`
 - I noen tilfeller må man også kjøre `react-native start` som bygger JavaScript-applikasjonen
-- Hvis du får feilmelding åpne meny i appen ved å trykke `Ctrl+M` (evt. dobbeltrykk `R`) og trykk `Reload`
+- Hvis du får feilmelding åpne meny i appen ved å trykke `Ctrl+M` og trykk `Reload` (evt. dobbeltrykk `R`)
 
-#### Windows
-
-- Start app i emulator: `react-native run-android` (android emulator må allerede være startet)
-- I noen tilfeller må man også kjøre `react-native start` som bygger JavaScript-applikasjonen
-- Hvis du får feilmelding åpne meny i appen ved å trykke `Ctrl+M` (evt. dobbeltrykk `R`) og trykk `Reload`
+## Oppgaver på kurset
 
 Nå kan du endre kode i `app`-mappen. Reload applikasjonen som nevnt over eller aktiver `Enable Hot Reloading`
 i menyen for at dette skjer automatisk ved endringer.
-
-## Oppgaver på kurset
 
 Oppgavene er delt inn i egne steg nedenfor.
 
@@ -68,7 +63,7 @@ Utvid filen `component/BrewList.js`. Her kan du benytte `elements/List`-komponen
 deg med å presentere en ferdig liste hvis du sender inn korrekte props.
 
 I `BrewList.js` så inneholder variabelen `brewList` en liste over alle brew som eksisterer. Når du
-starter applikasjonen skal du ha en ferdig liste vi har lagt inn for deg. Se gjerne på
+starter applikasjonen skal du ha en ferdig liste vi har lagt inn for deg som du kan presentere. Se gjerne på
 `brewPropType` i `Brew.js`-komponenten for hvordan en øl er representert, altså hvordan
 innholdet elementene i `brewList` ser ut.
 
@@ -80,7 +75,7 @@ For å kunne se mer detaljer om en øl ønsker vi å kunne gå inn på detaljvis
 en egen komponent `Brew.js` som kan utvides til å vise detaljer om en øl.
 
 For å navigere til denne komponenten har vi laget en hjelpemetode i `BrewList.js` som heter
-`navigateToBrew`. Da blir man sendt til `Brew.js` med `brew` som prop. Se hint i `BrewList.js`
+`navigateToBrew`. Da blir man sendt til `Brew.js` med riktig `brew` som prop. Se hint i `BrewList.js`
 for hvordan du kan gå frem for å legge inn en slik lenke.
 
 Når du navigerer til en øl vil det automatisk komme en tilbakeknapp øverst.
@@ -92,7 +87,7 @@ Når du navigerer til en øl vil det automatisk komme en tilbakeknapp øverst.
 #### Lage lenke til "ny øl"
 
 Fra listen som vises ønsker du å kunne navigere til "ny øl"-skjermen. Du må derfor legge inn en lenke
-til dette. I `BrewListContainer.js` sin `navigationOptions`-objekt er det et element `right` i `header`
+til dette. I `BrewListContainer.js` sitt `navigationOptions`-objekt er det et element `right` i `header`
 som rendrer teksten til høyre i headeren. Her kan du lage en knapp som fyrer av `navigate` med navn
 på ruten vi skal gå til. Se filen `BrewListContainer.js` for nærmere hint.
 
@@ -110,7 +105,7 @@ Her skal dere lage et view som lar brukeren legge inn øl med navn, produsent, p
 Dere kan benytte ferdige komponenter som ligger i `elements`-mappen. Legg spesielt merke til
 `propTypes` i disse komponentene som er `isRequired`. Disse skal som minimum implementeres.
 
-Når et felt endrer seg så skal man gi beskjed oppover i React om dette. Hver av feltene som støttes
+Når et felt endrer seg så skal man gi beskjed oppover i React om dette. Hvert av feltene som støttes
 har derfor en egen funksjon som f.eks. `onBrewNameChanged` som kan sendes til input-feltet.
 
 For å opprette ølen må det legges inn en knapp som kaller på `onAddBrewClick` når den trykkes på.
@@ -124,9 +119,9 @@ lagre tilstand og koble applikasjonen sammen.
 
 Ideer du kan prøve på:
 
-- Redigere øl
-- Slette øl
-- Ta bilde av en øl og legge inn
+- Redigere øl (i stedet for `addBrew(brew)` så kan du bruke `updateBrew(key, newBrew)`)
+- Slette øl (i stedet for `addBrew(brew)` så kan du bruke `removeBrew(key)`)
+- Ta bilde av en øl og legge inn (laste opp bilde til en URL og oppdatere brew)
 
 ## Synkronisering av data
 
