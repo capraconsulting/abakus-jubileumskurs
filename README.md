@@ -45,11 +45,11 @@ Hvis du står fast så har vi også laget et løsningsforslag for de ulike stege
 
 - [master](https://github.com/capraconsulting/abakus-jubileumskurs/tree/master)
   (denne tar dere utgangspunkt i)
-- [steg-1](https://github.com/capraconsulting/abakus-jubileumskurs/tree/steg-1)
+- [step1](https://github.com/capraconsulting/abakus-jubileumskurs/tree/step1)
   (løsningsforslag steg 1)
-- [steg-2](https://github.com/capraconsulting/abakus-jubileumskurs/tree/steg-2)
+- [step2](https://github.com/capraconsulting/abakus-jubileumskurs/tree/step2)
   (løsningsforslag steg 2)
-- [steg-3](https://github.com/capraconsulting/abakus-jubileumskurs/tree/steg-3)
+- [step3](https://github.com/capraconsulting/abakus-jubileumskurs/tree/step3)
   (løsningsforslag steg 3)
 
 (Det er også en branch [final](https://github.com/capraconsulting/abakus-jubileumskurs/tree/final) som brukes
