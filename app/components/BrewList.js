@@ -11,11 +11,7 @@ export const BrewList = ({brewList, navigateToNewForm, navigateToBrew}) => (
   // og som kaller navigateToBrew() med brew.brewName og brew.key som parametere.
 
   <View style={styles.container}>
-    <List
-      items={brewList}
-      title={brew => `${brew.brewery}: ${brew.brewName}`}
-      onPress={brew => navigateToBrew(brew.brewName, brew.key)}
-    />
+    <Text>Her skal du legge en liste over ølene</Text>
   </View>
 );
 
