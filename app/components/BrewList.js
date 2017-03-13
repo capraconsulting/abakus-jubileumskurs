@@ -20,10 +20,10 @@ export const BrewList = ({brewList, navigateToNewForm, navigateToBrew}) => (
 );
 
 BrewList.propTypes = {
-  // Se `brewPropType` i `Brew.js` for hvordan elementene i brewList ser ut
+  // Se `brewWithKeyPropType` i `Brew.js` for hvordan elementene i brewList ser ut
   brewList: React.PropTypes.arrayOf(
     React.PropTypes.shape(
-      brewPropType
+      brewWithKeyPropType
     )
   ).isRequired,
   navigateToNewForm: React.PropTypes.func.isRequired,
