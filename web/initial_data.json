@@ -1,0 +1,26 @@
+[
+  {
+    "brewName": "Wit",
+    "brewType": "Other",
+    "brewery": "Nøgne Ø",
+    "alcohol": 4.5,
+    "rating": 3,
+    "image": "http://3.bp.blogspot.com/-Fg9otzTxUoA/T2TM36terSI/AAAAAAAAAR8/09R5SWjsYtw/s1600/Nogne+O+Wit.JPG"
+  },
+  {
+    "brewName": "IPA",
+    "brewType": "IPA",
+    "brewery": "Mack",
+    "alcohol": 4.5,
+    "rating": 3,
+    "image": "http://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/13722317_279258632434846_1531686378_n.jpg?ig_cache_key=MTMwMjk3OTQ1NTg2NTgxNzk2Ng%3D%3D.2"
+  },
+  {
+    "brewName": "Pils",
+    "brewType": "E.C.Dahls",
+    "brewery": "Lager",
+    "alcohol": 4.7,
+    "rating": 2,
+    "image": "https://gfx.nrk.no/R4bvmTd5hiEEh4K0MAuCwwHad-puZ6pFbTYJO5ilNLwQ"
+  }
+]
