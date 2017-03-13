@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {NavigationActions} from 'react-navigation';
+import {Text} from 'react-native'
 
 import { removeBrew } from '../actions/brewList'
 import HeaderButton from '../elements/HeaderButton'
@@ -14,10 +15,8 @@ BrewListContainer.navigationOptions = {
     right: (
       // Steg 3: Her trenger vi en knapp som kaller på navigate('newBrew') for å gå til skjema for ny øl
       // Du kan skrive JSX-element direkte her. Tips: Se HeaderButton
-      <HeaderButton
-        title='New brew'
-        onPress={() => navigate('newBrew')}
-      />
+      //<Text>Eksempel</Text>
+      null // fjern denne linjen
     ),
   }),
 };
