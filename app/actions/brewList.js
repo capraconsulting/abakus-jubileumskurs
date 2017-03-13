@@ -6,6 +6,10 @@ export const UPDATE_BREW = 'brewList/UPDATE_BREW';
 
 export const addBrew = brew => () => fb.ref('/').push(brew);
 
+export const removeBrew = key => () => fb.ref(`/${key}`).remove();
+
+export const updateBrew = (key, newBrew) => () => fb.ref(`/${key}`).update(newBrew);
+
 export const firebaseBrewAdded = (key, brew) => ({
   type: ADD_BREW,
   payload: {

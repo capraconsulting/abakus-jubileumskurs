@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {NavigationActions} from 'react-navigation';
 
+import { removeBrew } from '../actions/brewList'
 import HeaderButton from '../elements/HeaderButton'
 import BrewList from '../components/BrewList'
 
@@ -34,7 +35,10 @@ const mapDispatchToProps = dispatch => ({
   navigateToBrew: (brewName, key) => dispatch(NavigationActions.navigate({
     routeName: 'brew',
     params: {brewName, key}
-  }))
+  })),
+
+  // Eksempel sletting av brew
+  removeBrew: key => dispatch(removeBrew(key)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BrewListContainer);
