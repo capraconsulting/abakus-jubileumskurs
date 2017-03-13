@@ -41,9 +41,3 @@ export const setRating = rating => ({
 export const resetForm = () => ({
   type: RESET_FORM
 });
-
-export const openImagePicker = () => (dispatch) => {
-    return pickImage()
-        .then(image => dispatch(setImage(image)))
-        .catch((error) => console.error(error));
-};
