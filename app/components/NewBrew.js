@@ -8,6 +8,7 @@ import Picker from '../elements/Picker';
 
 import {brewTypes} from '../constants/brewTypes';
 
+// Denne kan benyttes til å disable knappen for å registrere ny øl hvis skjemaet ikke er riktig utfylt
 function validateNewBrew(brew) {
   const brewNameValid = brew.brewName && brew.brewName.trim().length > 0;
   const breweryValid = brew.brewery && brew.brewery.trim().length > 0;
