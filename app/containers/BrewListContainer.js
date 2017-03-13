@@ -12,7 +12,7 @@ BrewListContainer.navigationOptions = {
   title: 'Brew list',
   header: ({state, navigate}) => ({
     right: (
-      // Steg 2: Her trenger vi en knapp som kaller på navigate('newBrew') for å gå til skjema for ny øl
+      // Steg 3: Her trenger vi en knapp som kaller på navigate('newBrew') for å gå til skjema for ny øl
       // Du kan skrive JSX-element direkte her. Tips: Se HeaderButton
       <HeaderButton
         title='New brew'

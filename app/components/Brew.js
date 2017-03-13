@@ -20,11 +20,11 @@ function renderRating(rating) {
 }
 
 export const Brew = ({brew}) => (
-  // Steg 3:
+  // Steg 2:
   // Fyll inn View-elementet med et Card element som viser et bilde (brew.image), brewName, brewery, brewType,
   // alcohol og rating. Du kan bruke hjelpe-funksjonen renderRating(rating) for å representere rating som stjerner
   // PS: Wrap renderRating med et View stylet med flex for å få stjernene til å vises i en rad.
-  // FIXME: remove code before step 3
+  // FIXME: remove code before step 2
   <View>
     <Card image={brew.image}>
       <Text>Brewery: {brew.brewery}</Text>

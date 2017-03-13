@@ -29,18 +29,12 @@ export const NewBrew = props => {
       image,
     };
 
-    // FIXME: fjern neste to linjer
     props.onSaveBrew(newBrew);
     props.navigation.goBack();
-    // Steg 2: kall props.onSaveBrew(newBrew);
-    // Steg 2: kall props.navigation.goBack(); for å gå tilbake til listevisning etter øl er lagt til
-
-    // FIXME: fjern kommentar neste linje
-    //alert("Du trykket lagre knappen for ølen med navn " + newBrew.brewName + "!");
   };
 
   return (
-    // Steg 1: Her kan man legge inn de forskjellige input-elementene som trengs for å legge til en ny brew
+    // Steg 3: Her kan man legge inn de forskjellige input-elementene som trengs for å legge til en ny brew
     // Tips: Bruk komponentene TextInput, Slider og Picker fra / elements-mappen
     <ScrollView>
       <TextInput

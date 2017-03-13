@@ -5,9 +5,9 @@ import { brewWithKeyPropType } from './Brew';
 import List from '../elements/List';
 
 export const BrewList = ({brewList, navigateToNewForm, navigateToBrew}) => (
-  // Step 2: List ut alle brews i brewList. Bruk List-elementet fra elements/List.js
+  // Step 1: List ut alle brews i brewList. Bruk List-elementet fra elements/List.js
   //
-  // Step 3: Legg til en onPress funksjon som får inn brew som parameter
+  // Step 2: Legg til en onPress funksjon som får inn brew som parameter
   // og som kaller navigateToBrew() med brew.brewName og brew.key som parametere.
 
   <View style={styles.container}>
