@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native';
 
-import { brewPropType } from './Brew';
+import { brewWithKeyPropType } from './Brew';
 import List from '../elements/List';
 
 export const BrewList = ({brewList, navigateToNewForm, navigateToBrew}) => (
