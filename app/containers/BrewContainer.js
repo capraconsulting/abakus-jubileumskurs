@@ -28,8 +28,6 @@ BrewContainer.navigationOptions = {
   //   - key
   //   Den første kan vi benytte her for å sette en relevant tittel for komponenten vi ser på.
   //   Disse parametrene er tilgjengelig i `state.params`-objektet.
-  // FIXME
-  //title: ({ state }) => 'Some beer'
   title: ({ state }) => state.params.brewName
 };
 
