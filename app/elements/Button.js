@@ -4,7 +4,10 @@ import { Button as ElementsButton } from 'react-native-elements';
 import colors from '../constants/colors';
 import icons from '../constants/icons';
 
-const Button = ({text, large, icon, backgroundColor, onPress, disabled}) => (
+/**
+ * Denne komponenten gir deg en enkel knapp
+ */
+const Button = ({ text, large, icon, backgroundColor, onPress, disabled }) => (
   <ElementsButton onPress={onPress}
                   raised
                   large={large}
@@ -15,15 +18,16 @@ const Button = ({text, large, icon, backgroundColor, onPress, disabled}) => (
 );
 
 Button.propTypes = {
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
   large: PropTypes.bool,
   icon: PropTypes.shape({
     name: PropTypes.string,
     type: PropTypes.string
   }),
   backgroundColor: PropTypes.string,
-  onPress: PropTypes.func,
-  disabled: PropTypes.bool
+  onPress: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
+  raised: PropTypes.bool
 };
 
 Button.defaultProps = {

@@ -3,6 +3,9 @@ import { Button as ElementsButton } from 'react-native-elements';
 
 import colors from '../constants/colors';
 
+/**
+ * Denne komponenten kan brukes for å lage en enkel knapp som du kan legge i headeren
+ */
 const HeaderButton = ({ title, color, backgroundColor, onPress }) => (
   <ElementsButton
     onPress={onPress}

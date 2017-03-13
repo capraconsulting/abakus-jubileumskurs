@@ -4,6 +4,9 @@ import { Icon as ElementsIcon } from 'react-native-elements';
 
 import icons from '../constants/icons';
 
+/**
+ * Denne komponenten benyttes av Brew for å rendre et stjerne-ikon
+ */
 const Icon = ({icon}) => (
   <ElementsIcon {...icon} />
 );

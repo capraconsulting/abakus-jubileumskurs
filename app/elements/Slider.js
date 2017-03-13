@@ -2,6 +2,9 @@ import React, {PropTypes} from 'react';
 import {View, Text} from 'react-native';
 import {FormLabel, Slider as ElementsSlider} from 'react-native-elements'
 
+/**
+ * Denne komponenten gir deg en slider som kan brukes for å dra mellom ulike verdier
+ */
 const Slider = ({label, value, onChange, min, max, decimals = 0, step}) => {
   return (
     <View>
@@ -19,18 +22,13 @@ const Slider = ({label, value, onChange, min, max, decimals = 0, step}) => {
 };
 
 Slider.propTypes = {
-  label: PropTypes.string,
-  value: PropTypes.number,
-  placeholder: PropTypes.string,
-  onChange: PropTypes.func,
-  min: PropTypes.number,
-  max: PropTypes.number,
-  decimals: PropTypes.number,
-  step: PropTypes.number,
-  required: PropTypes.bool,
-  errorMessage: PropTypes.string,
-  onFocus: PropTypes.func,
-  onBlur: PropTypes.func
+  label: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
+  onChange: PropTypes.func.isRequired,
+  min: PropTypes.number.isRequired,
+  max: PropTypes.number.isRequired,
+  decimals: PropTypes.number, // Number of decimals to use
+  step: PropTypes.number.isRequired
 };
 
 export default Slider;

@@ -2,6 +2,9 @@ import React, {PropTypes} from 'react';
 import {View} from 'react-native';
 import {FormLabel, FormInput, FormValidationMessage} from 'react-native-elements'
 
+/**
+ * Denne komponenten gir deg et tekstfelt man kan fylle inn data
+ */
 const TextInput = ({label, value, placeholder, onTextChange, required, errorMessage, onFocus, onBlur}) => (
   <View>
     <FormLabel>{label}</FormLabel>

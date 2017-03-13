@@ -12,6 +12,9 @@ const renderItems = (items, labelAs) => {
   });
 };
 
+/**
+ * Denne komponenten lar deg lage en dropdown-liste
+ */
 const Picker = ({items, label, labelAs, selectedItem, onSelect}) => {
   return (
     <View>
@@ -31,8 +34,8 @@ Picker.propTypes = {
     PropTypes.oneOfType([
       PropTypes.object,
       PropTypes.string
-    ])
-  ),
+    ]).isRequired
+  ).isRequired,
   label: PropTypes.string,
   labelAs: PropTypes.string,
   onSelect: PropTypes.func,

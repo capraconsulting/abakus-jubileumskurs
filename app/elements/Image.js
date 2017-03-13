@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 
 import { Image as NativeImage, StyleSheet } from 'react-native';
 
+// FIXME: denne brukes ikke??
 const Image = ({source}) => (
     <NativeImage style={styles.image}
                  source={{uri: source}} />

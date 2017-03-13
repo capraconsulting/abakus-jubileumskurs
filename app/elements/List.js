@@ -4,18 +4,18 @@ import { List as ElementsList, ListItem } from 'react-native-elements';
 const List = ({items, titleKey, onPress}) => (
   <ElementsList>
     {
-      items.map((item, index) => (
-        <ListItem key={index}
+      items.map((item, key) => (
+        <ListItem key={key}
                   title={item[titleKey]}
-                  onPress={() => onPress(item, index)} />
+                  onPress={() => onPress && onPress(item, key)} />
       ))
     }
   </ElementsList>
 );
 
 List.propTypes = {
-  items: PropTypes.array,
-  titleKey: PropTypes.string,
+  items: PropTypes.array.isRequired,
+  titleKey: PropTypes.string.isRequired,
   onPress: PropTypes.func
 };
 
