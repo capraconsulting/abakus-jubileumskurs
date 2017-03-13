@@ -1,4 +1,4 @@
-# Velkommen til jubileumskurs
+# Velkommen til jubileumskurs med Capra Consulting
 
 Vi skal lage en applikasjonen som holder styr på en liten ølsamling, ala [untapped](https://untappd.com/).
 En bruker skal kunne se listen over øl, detaljer om en øl samt legge inn nye øl.
