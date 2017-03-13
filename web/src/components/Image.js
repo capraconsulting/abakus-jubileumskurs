@@ -16,7 +16,7 @@ const Stars = ({rating}) => {
 const Image = ({src, rating}) => {
   return (
     <div className="brew-image">
-      <img src={src} />
+      <img src={src || 'https://pbs.twimg.com/media/CzW9RBZXUAAK43q.jpg'} />
       {
         rating > 0 && <Stars rating={rating} />
       }
@@ -30,7 +30,6 @@ Image.propTypes = {
 };
 
 Image.defaultProps = {
-  src: 'https://pbs.twimg.com/media/CzW9RBZXUAAK43q.jpg',
   rating: 0
 };
 

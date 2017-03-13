@@ -8,18 +8,18 @@ const Brew = ({ brew }) => (
       <div className="panel-body">
         <Image src={brew.image} rating={brew.rating} />
         <div className="row">
-          <div className="col-xs-6">
+          <div className="col-xs-7 overflow-ellipsis">
             <h1 className="brew-name">{brew.brewName || 'Ukjent'}</h1>
           </div>
-          <div className="col-xs-6 text-right">
+          <div className="col-xs-5 text-right">
             <h1 className="brew-type">{brew.brewType || 'Ukjent'}</h1>
           </div>
         </div>
         <div className="row">
-          <div className="col-xs-6">
+          <div className="col-xs-7 overflow-ellipsis">
             <h2 className="brewery">{brew.brewery || 'Ukjent'}</h2>
           </div>
-          <div className="col-xs-6">
+          <div className="col-xs-5">
             <h2 className="alcohol text-right">{brew.alcohol ? brew.alcohol.toFixed(1) : '?'}%</h2>
           </div>
         </div>
