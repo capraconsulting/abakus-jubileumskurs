@@ -1,13 +1,13 @@
 # Velkommen til jubileumskurs med Capra Consulting
 
-Vi skal lage en applikasjonen som holder styr på en liten ølsamling, ala [untapped](https://untappd.com/).
+Vi skal lage en applikasjonen som holder styr på en liten ølsamling, ala [Untappd](https://untappd.com/).
 En bruker skal kunne se listen over øl, detaljer om en øl samt legge inn nye øl.
 
 Oppgaven tar utgangspunkt i en kodebase vi har skrevet, og din jobb er å utvide denne.
 
 ##  Oppsett utviklingsmiljø
 
-- Følg oppskriften på https://facebook.github.io/react-native/docs/getting-started.html
+- Følg oppskriften på [nettsidene til Facebook](https://facebook.github.io/react-native/docs/getting-started.html)
 - **For iOS på Mac:** Husk at du trenger Xcode. Det bør lastes ned på forhånd. Du finner det [her](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
 - **For Android:** Sørg for at du har startet en emulator før du fortsetter.
 
