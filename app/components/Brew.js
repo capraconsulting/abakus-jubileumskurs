@@ -7,8 +7,10 @@ import icons from '../constants/icons';
 
 function renderRating(rating) {
   return [1, 2, 3, 4, 5].map((i, index) => {
-    const icon = i <= rating ? icons.STAR : icons.STAR_O;
-    icon.color = 'yellow';
+    const icon = {
+      ...(i <= rating ? icons.STAR : icons.STAR_O),
+      color: 'yellow',
+    };
     return (
       <View style={{width: 50, height: 50}} key={index}>
         <Icon icon={icon}/>
