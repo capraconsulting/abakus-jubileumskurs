@@ -26,7 +26,7 @@ export const Brew = ({brew}) => (
   // PS: Wrap renderRating med et View stylet med flex for å få stjernene til å vises i en rad.
   // FIXME: remove code before step 3
   <View>
-    <Card>
+    <Card image={brew.image}>
       <Text>Brewery: {brew.brewery}</Text>
       <Text>Brew type: {brew.brewType}</Text>
       <Text>Alcohol: {brew.alcohol.toFixed(1)} %</Text>

@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react'
 import {Text, ScrollView, View, Image, TouchableOpacity} from 'react-native';
-import icons from '../constants/icons';
 
 import TextInput from '../elements/TextInput';
 import Button from '../elements/Button';
@@ -18,7 +17,7 @@ function validateNewBrew(brew) {
 export const NewBrew = props => {
 
   const {brewName, brewery, alcohol, brewType, image, rating} = props;
-  const {onBrewNameChanged, onBreweryChanged, onAlcoholChanged, onBrewTypeChanged, onRatingChanged} = props;
+  const {onBrewNameChanged, onBreweryChanged, onAlcoholChanged, onBrewTypeChanged, onRatingChanged, onImageChanged} = props;
 
   const onAddBrewClick = () => {
     const newBrew = {
@@ -27,6 +26,7 @@ export const NewBrew = props => {
       alcohol,
       brewType,
       rating,
+      image,
     };
 
     // FIXME: fjern neste to linjer
@@ -46,14 +46,14 @@ export const NewBrew = props => {
       <TextInput
         label="Brew name"
         value={brewName}
-        placeholder="e.g. Dahls Pils"
+        placeholder="E.g. Dahls Pils"
         onTextChange={onBrewNameChanged}
         required={true}
         errorMessage="Required"/>
       <TextInput
         label="Brewery"
         value={brewery}
-        placeholder="e.g. E.C Dahls Bryggeri"
+        placeholder="E.g. E.C Dahls Bryggeri"
         onTextChange={onBreweryChanged}
         required={true}
         errorMessage="Required"/>
@@ -77,9 +77,14 @@ export const NewBrew = props => {
         min={1}
         max={5}
         step={1}/>
-      <Button text='Take Picture'
-              onPress={props.onPickImagePressed}
-              icon={icons.CAMERA}/>
+      <TextInput
+        label="Image url"
+        value={image}
+        placeholder="http://example.com/image.jpg"
+        onTextChange={onImageChanged}
+        required={true}
+        errorMessage="Required"/>
+
       <View style={{marginTop: 20}}>
         <Image source={image.source} />
       </View>
@@ -106,7 +111,6 @@ NewBrew.propTypes = {
   onNavigateBack: PropTypes.func.isRequired,
   onSaveBrew: PropTypes.func.isRequired,
   navigation: PropTypes.any,
-  onPickImagePressed: React.PropTypes.func.isRequired
 };
 
 export default NewBrew;

@@ -24,7 +24,8 @@ const mapDispatchToProps = dispatch => ({
   onBrewTypeChanged: (value) => dispatch(setBrewType(value)),
   onImageChanged: (value) => dispatch(setImage(value)),
   onRatingChanged: (value) => dispatch(setRating(value)),
-  onPickImagePressed: () => dispatch(openImagePicker()),
+  // Next line is not implemented. Don't use.
+  // onPickImagePressed: () => dispatch(openImagePicker()),
   onSaveBrew: (brew) => {
     dispatch(addBrew(brew));
     dispatch(resetForm());

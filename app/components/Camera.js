@@ -1,6 +1,10 @@
 import ImagePicker from 'react-native-image-picker';
 import { Platform } from 'react-native';
 
+/*
+ * NOTE: We are currently not using this component
+ */
+
 // More info on all the options is below in the README...just some common use cases shown here
 const options = {
     title: 'Snap your brew!',
