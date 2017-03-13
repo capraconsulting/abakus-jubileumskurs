@@ -43,17 +43,17 @@ export const Brew = ({brew}) => (
 );
 
 export const brewPropType = {
-  alcohol: PropTypes.number,
-  brewery: PropTypes.string,
-  brewName: PropTypes.string,
-  brewType: PropTypes.string,
+  alcohol: PropTypes.number.isRequired,
+  brewery: PropTypes.string.isRequired,
+  brewName: PropTypes.string.isRequired,
+  brewType: PropTypes.string.isRequired,
   image: PropTypes.string,
-  rating: PropTypes.number,
+  rating: PropTypes.number.isRequired,
 };
 
 export const brewWithKeyPropType = {
   ...brewPropType,
-  key: PropTypes.string, // ID in Firebase datastore
+  key: PropTypes.string.isRequired, // ID in Firebase datastore
 };
 
 Brew.propTypes = {

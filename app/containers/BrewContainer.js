@@ -37,6 +37,14 @@ const getBrew = (state, key) => {
   const brew = state.brewList.find(brew => brew.key === key)
   if (brew) {
     return {
+      // Enforce defaults just in case someone screws up the distributed store
+      alcohol: 4,
+      brewery: 'Missing',
+      brewName: 'Missing',
+      brewType: 'Missing',
+      image: '',
+      rating: 2,
+
       // Transform state so we merge key and data of brew items
       ...brew.data,
       key: brew.key,
